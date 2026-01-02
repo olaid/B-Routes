@@ -9,7 +9,7 @@
     />
     <canvas
       ref="canvasRef"
-      class="route-canvas"
+      :class="['route-canvas', { 'route-canvas-interactive': props.interactive }]"
       @click="handleCanvasClick"
     ></canvas>
   </div>
@@ -156,7 +156,11 @@ onMounted(() => {
   left: 0;
   width: 100%;
   height: 100%;
-  cursor: props.interactive ? 'crosshair' : 'default';
+  cursor: default;
+}
+
+.route-canvas-interactive {
+  cursor: crosshair;
 }
 
 @media (max-width: 768px) {
