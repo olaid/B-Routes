@@ -2,10 +2,11 @@
   <div class="route-canvas-container">
     <img
       ref="imageRef"
-      :src="imageUrl"
+      :src="props.route.imageUrl"
       alt="Route image"
       class="route-image"
       @load="onImageLoad"
+      @error="onImageError"
     />
     <canvas
       ref="canvasRef"
@@ -37,6 +38,10 @@ const canvasRef = ref<HTMLCanvasElement | null>(null)
 
 const onImageLoad = () => {
   drawVectors()
+}
+
+const onImageError = () => {
+  console.error('Failed to load image:', props.route.imageUrl)
 }
 
 const drawVectors = () => {
