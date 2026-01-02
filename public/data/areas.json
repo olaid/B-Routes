@@ -1,0 +1,54 @@
+{
+  "areas": [
+    {
+      "id": "area1",
+      "name": "エリアA",
+      "polygon": [
+        [35.0, 139.0],
+        [35.1, 139.0],
+        [35.1, 139.1],
+        [35.0, 139.1]
+      ],
+      "walls": [
+        {
+          "id": "wall1",
+          "name": "壁1",
+          "coordinates": [35.05, 139.05],
+          "routes": [
+            {
+              "id": "route1",
+              "name": "ルート1",
+              "difficulty": "V3",
+              "imageUrl": "/images/routes/route1.jpg",
+              "vectors": {
+                "lines": [
+                  {
+                    "points": [[0.2, 0.8], [0.3, 0.6], [0.5, 0.4], [0.7, 0.2]],
+                    "color": "#ff0000",
+                    "width": 3
+                  }
+                ],
+                "startHolds": [
+                  {
+                    "position": [0.2, 0.8],
+                    "type": "start",
+                    "label": "S"
+                  }
+                ],
+                "keyPoints": [
+                  {
+                    "position": [0.5, 0.4],
+                    "description": "重要なポイント",
+                    "icon": "star"
+                  }
+                ]
+              },
+              "description": "サンプルルート1の説明"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+
