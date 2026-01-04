@@ -23,7 +23,7 @@ const polygons: L.Polygon[] = []
 onMounted(() => {
   if (!mapContainer.value) return
 
-  map = L.map(mapContainer.value).setView([36.23, 43.2131], 5)
+  map = L.map(mapContainer.value).setView([36.13, 140.00], 5)
 
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '© OpenStreetMap contributors'
