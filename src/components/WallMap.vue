@@ -23,7 +23,7 @@ const markers: L.Marker[] = []
 onMounted(() => {
   if (!mapContainer.value) return
 
-  map = L.map(mapContainer.value).setView([35.05, 139.05], 13)
+  map = L.map(mapContainer.value).setView([36.23, 43.2131], 13)
 
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '© OpenStreetMap contributors'
