@@ -5,9 +5,10 @@
 ## 機能
 
 - **エリア選択画面**: 地図上にエリアを塗り分けて表示
-- **壁選択画面**: 地図上に壁の位置をピンで表示
+- **壁の地図画面**: 地図上に壁の位置をピンで表示
+- **壁のルート一覧**: `/area/:areaId/wall/:wallId` でその壁のルートを一覧し、詳細へ遷移
 - **ルート詳細画面**: 岩の画像にルートの線、スタートホールド、重要なポイントを重ねて表示
-- **管理画面**: 壁とルートの追加・編集機能
+- **管理画面**: 壁とルートの追加・編集（Supabase 利用時は DB / Storage に保存）
 
 ## 技術スタック
 
@@ -16,6 +17,7 @@
 - Vue Router
 - Leaflet (地図表示)
 - Canvas API (ベクターデータ描画)
+- Supabase（任意: `VITE_SUPABASE_URL` / `VITE_SUPABASE_ANON_KEY` を設定すると Postgres + Storage を使用。未設定時は `public/data/areas.json` のみ読み取り）
 
 ## セットアップ
 
@@ -45,6 +47,15 @@ npm install
 npm run dev
 ```
 
+### Supabase（管理画面の保存・画像アップロード）
+
+1. [Supabase](https://supabase.com/) でプロジェクトを作成する。
+2. ルートの `.env` に `.env.example` を参考に `VITE_SUPABASE_URL` と `VITE_SUPABASE_ANON_KEY` を設定する。
+3. SQL エディタまたは CLI で `supabase/migrations/` 内の SQL を上から順に実行し、テーブル・RLS・シード・Storage バケット `route-images` を作成する。  
+   （バケット作成が SQL で失敗する場合はダッシュボードの Storage から同名の公開バケットを手動作成し、ポリシーはマイグレーションを参考に設定する。）
+
+未設定の場合、公開サイトはローカルの `public/data/areas.json` から読み込みます。管理画面の保存・削除・Storage アップロードは Supabase 設定後に利用できます。
+
 ### ビルド
 
 ```bash
@@ -59,7 +70,9 @@ npm run preview
 
 ## データ構造
 
-データは `public/data/areas.json` に保存されています。
+**Supabase 未設定時**: データの参照元は `public/data/areas.json` のみです。
+
+**Supabase 設定時**: 正は Postgres（`areas` / `walls` / `routes` テーブル）と Storage（ルート画像）です。スキーマは `supabase/migrations/20250501100000_initial_schema.sql` を参照してください。
 
 階層構造:
 - エリア (Area)
@@ -71,7 +84,7 @@ npm run preview
 ルートの画像は `public/images/routes/` ディレクトリに配置してください。
 `areas.json` の `imageUrl` フィールドで画像のパスを指定します。
 
-例: `/images/routes/route1.jpg`
+例: `/images/routes/route1.svg`（リポジトリにサンプル SVG を同梱）
 
 ## 開発
 

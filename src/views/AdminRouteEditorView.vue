@@ -31,6 +31,17 @@
             画像URL:
             <input v-model="imageUrl" type="text" class="input" />
           </label>
+          <div v-if="showStorageUpload" class="upload-row">
+            <label class="upload-label">画像ファイルをアップロード（Storage）</label>
+            <input
+              type="file"
+              accept="image/*"
+              class="file-input"
+              :disabled="uploadBusy"
+              @change="onImageFile"
+            />
+            <p v-if="uploadBusy" class="hint">アップロード中…</p>
+          </div>
           <div v-if="imageUrl" class="image-preview">
             <img :src="imageUrl" alt="Route preview" @error="imageError = true" />
             <div v-if="imageError" class="image-error">画像の読み込みに失敗しました</div>
@@ -70,8 +81,15 @@
           <div v-else class="empty">画像URLを入力してください</div>
         </div>
         <div class="form-actions">
-          <button @click="saveRoute" class="btn btn-primary btn-large">保存</button>
-          <button @click="goBack" class="btn btn-secondary btn-large">キャンセル</button>
+          <button
+            type="button"
+            class="btn btn-primary btn-large"
+            :disabled="savingRoute"
+            @click="submitRoute"
+          >
+            {{ savingRoute ? '保存中…' : '保存' }}
+          </button>
+          <button type="button" class="btn btn-secondary btn-large" @click="goBack">キャンセル</button>
         </div>
       </div>
     </main>
@@ -82,12 +100,19 @@
 import { ref, computed, onMounted } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { useAreas } from '../composables/useAreas'
+import { useRouteEditor } from '../composables/useRouteEditor'
+import { uploadRouteImage } from '../lib/areasRepository'
+import { isSupabaseConfigured } from '../lib/supabase'
 import RouteEditor from '../components/RouteEditor.vue'
 import type { Route, Line, Point, KeyPoint } from '../types'
 
 const routeParams = useRoute()
 const router = useRouter()
 const { loading, error, loadAreas, getRoute } = useAreas()
+const { saving: savingRoute, saveRoute: persistRouteToDb } = useRouteEditor()
+
+const showStorageUpload = computed(() => isSupabaseConfigured())
+const uploadBusy = ref(false)
 
 const areaId = computed(() => routeParams.params.areaId as string)
 const wallId = computed(() => routeParams.params.wallId as string)
@@ -132,6 +157,22 @@ onMounted(() => {
   })
 })
 
+const onImageFile = async (e: Event) => {
+  const input = e.target as HTMLInputElement
+  const file = input.files?.[0]
+  if (!file || !isSupabaseConfigured()) return
+  uploadBusy.value = true
+  imageError.value = false
+  try {
+    imageUrl.value = await uploadRouteImage(file, wallId.value)
+  } catch (err) {
+    alert(err instanceof Error ? err.message : 'アップロードに失敗しました')
+  } finally {
+    uploadBusy.value = false
+    input.value = ''
+  }
+}
+
 const handleVectorsUpdate = (vectors: typeof currentVectors.value) => {
   currentVectors.value = vectors
 }
@@ -145,26 +186,45 @@ const clearAll = () => {
   }
 }
 
-const saveRoute = () => {
+const submitRoute = async () => {
+  if (wallId.value === 'new') {
+    alert('先に壁を保存してからルートを追加してください。')
+    return
+  }
   if (!routeName.value.trim()) {
     alert('ルート名を入力してください')
     return
   }
   if (!imageUrl.value.trim()) {
-    alert('画像URLを入力してください')
+    alert('画像URLを入力するか、画像をアップロードしてください')
+    return
+  }
+  if (!isSupabaseConfigured()) {
+    alert(
+      'Supabase が未設定のため保存できません。.env.example を参照し、マイグレーションを実行してください。'
+    )
     return
   }
 
-  // TODO: 実際の保存処理を実装（JSONファイルへの書き込み）
-  alert('保存機能は実装中です（JSONファイルの直接編集が必要）')
-  console.log('Route data:', {
-    id: isEdit.value ? routeId.value : `route_${Date.now()}`,
-    name: routeName.value,
+  const id = isEdit.value ? routeId.value : crypto.randomUUID()
+  const payload: Route & { wallId: string } = {
+    id,
+    wallId: wallId.value,
+    name: routeName.value.trim(),
     difficulty: difficulty.value || undefined,
     description: description.value || undefined,
-    imageUrl: imageUrl.value,
-    vectors: currentVectors.value
-  })
+    imageUrl: imageUrl.value.trim(),
+    vectors: JSON.parse(JSON.stringify(currentVectors.value)) as Route['vectors']
+  }
+
+  try {
+    await persistRouteToDb(payload)
+    await loadAreas()
+    alert('保存しました')
+    await router.push(`/admin/area/${areaId.value}/wall/${wallId.value}/edit`)
+  } catch (e) {
+    alert(e instanceof Error ? e.message : '保存に失敗しました')
+  }
 }
 
 const goBack = () => {
@@ -297,6 +357,27 @@ const goBack = () => {
   border-radius: 4px;
   overflow: hidden;
   background: #f5f5f5;
+}
+
+.upload-row {
+  margin-top: 1rem;
+}
+
+.upload-label {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.file-input {
+  font-size: 0.95rem;
+}
+
+.hint {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #64748b;
 }
 
 .empty {

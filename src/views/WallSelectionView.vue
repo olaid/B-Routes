@@ -33,17 +33,7 @@ const areaId = computed(() => routeParams.params.areaId as string)
 const area = computed(() => getArea(areaId.value))
 
 const handleWallClick = (wall: Wall) => {
-  if (wall.routes.length === 0) {
-    alert('この壁にはルートが登録されていません')
-    return
-  }
-
-  if (wall.routes.length === 1) {
-    router.push(`/area/${areaId.value}/wall/${wall.id}/route/${wall.routes[0].id}`)
-  } else {
-    // 複数のルートがある場合は最初のルートに遷移（将来的にルート選択画面を追加可能）
-    router.push(`/area/${areaId.value}/wall/${wall.id}/route/${wall.routes[0].id}`)
-  }
+  router.push(`/area/${areaId.value}/wall/${wall.id}`)
 }
 
 const goBack = () => {

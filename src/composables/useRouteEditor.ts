@@ -1,18 +1,20 @@
 import { ref } from 'vue'
 import type { Route } from '../types'
+import { upsertRouteRecord } from '../lib/areasRepository'
+import { isSupabaseConfigured } from '../lib/supabase'
 
 export function useRouteEditor() {
   const saving = ref(false)
   const error = ref<string | null>(null)
 
-  const saveRoute = async (route: Route) => {
+  const saveRoute = async (route: Route & { wallId: string }) => {
     saving.value = true
     error.value = null
     try {
-      // TODO: 実際の保存処理を実装（JSONファイルへの書き込みまたはAPI呼び出し）
-      console.log('Saving route:', route)
-      // 現在はJSONファイルの直接編集が必要
-      alert('保存機能は実装中です。JSONファイルを直接編集してください。')
+      if (!isSupabaseConfigured()) {
+        throw new Error('Supabase が未設定です。.env に VITE_SUPABASE_URL と VITE_SUPABASE_ANON_KEY を設定してください。')
+      }
+      await upsertRouteRecord(route)
     } catch (err) {
       error.value = err instanceof Error ? err.message : '保存に失敗しました'
       throw err
@@ -27,4 +29,3 @@ export function useRouteEditor() {
     saveRoute
   }
 }
-

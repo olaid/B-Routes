@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import AreaSelectionView from '../views/AreaSelectionView.vue'
 import WallSelectionView from '../views/WallSelectionView.vue'
+import WallRoutesView from '../views/WallRoutesView.vue'
 import RouteDetailView from '../views/RouteDetailView.vue'
 import AdminWallEditorView from '../views/AdminWallEditorView.vue'
 import AdminRouteEditorView from '../views/AdminRouteEditorView.vue'
@@ -17,6 +18,11 @@ const router = createRouter({
       path: '/area/:areaId',
       name: 'wall-selection',
       component: WallSelectionView
+    },
+    {
+      path: '/area/:areaId/wall/:wallId',
+      name: 'wall-routes',
+      component: WallRoutesView
     },
     {
       path: '/area/:areaId/wall/:wallId/route/:routeId',

@@ -1,8 +1,10 @@
-import { ref, onMounted } from 'vue'
+import { ref } from 'vue'
 import type { AreasData, Area, Wall, Route } from '../types'
+import { fetchAreasData } from '../lib/areasRepository'
 
 const areasData = ref<AreasData | null>(null)
-const loading = ref(false)
+/** 初回はデータ未取得のため true（各ビューで loadAreas を呼ぶ前提） */
+const loading = ref(true)
 const error = ref<string | null>(null)
 
 export function useAreas() {
@@ -10,11 +12,7 @@ export function useAreas() {
     loading.value = true
     error.value = null
     try {
-      const response = await fetch('/data/areas.json')
-      if (!response.ok) {
-        throw new Error('データの読み込みに失敗しました')
-      }
-      areasData.value = await response.json()
+      areasData.value = await fetchAreasData()
     } catch (err) {
       error.value = err instanceof Error ? err.message : '不明なエラーが発生しました'
       console.error('Areas data loading error:', err)
@@ -24,24 +22,18 @@ export function useAreas() {
   }
 
   const getArea = (areaId: string): Area | undefined => {
-    return areasData.value?.areas.find(area => area.id === areaId)
+    return areasData.value?.areas.find((area) => area.id === areaId)
   }
 
   const getWall = (areaId: string, wallId: string): Wall | undefined => {
     const area = getArea(areaId)
-    return area?.walls.find(wall => wall.id === wallId)
+    return area?.walls.find((wall) => wall.id === wallId)
   }
 
   const getRoute = (areaId: string, wallId: string, routeId: string): Route | undefined => {
     const wall = getWall(areaId, wallId)
-    return wall?.routes.find(route => route.id === routeId)
+    return wall?.routes.find((r) => r.id === routeId)
   }
-
-  onMounted(() => {
-    if (!areasData.value) {
-      loadAreas()
-    }
-  })
 
   return {
     areasData,
@@ -53,4 +45,3 @@ export function useAreas() {
     getRoute
   }
 }
-

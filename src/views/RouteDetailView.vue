@@ -38,7 +38,7 @@ const routeId = computed(() => routeParams.params.routeId as string)
 const route = computed(() => getRoute(areaId.value, wallId.value, routeId.value))
 
 const goBack = () => {
-  router.push(`/area/${areaId.value}`)
+  router.push(`/area/${areaId.value}/wall/${wallId.value}`)
 }
 
 loadAreas()

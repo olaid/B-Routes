@@ -8,9 +8,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.45.0",
+    "leaflet": "^1.9.4",
     "vue": "^3.4.21",
-    "vue-router": "^4.3.0",
-    "leaflet": "^1.9.4"
+    "vue-router": "^4.3.0"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.0.4",

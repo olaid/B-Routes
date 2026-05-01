@@ -43,8 +43,15 @@
           <button @click="addNewRoute" class="btn btn-primary">新しいルートを追加</button>
         </div>
         <div class="form-actions">
-          <button @click="saveWall" class="btn btn-primary btn-large">保存</button>
-          <button @click="goBack" class="btn btn-secondary btn-large">キャンセル</button>
+          <button
+            type="button"
+            :disabled="saving"
+            class="btn btn-primary btn-large"
+            @click="saveWall"
+          >
+            {{ saving ? '保存中…' : '保存' }}
+          </button>
+          <button type="button" class="btn btn-secondary btn-large" @click="goBack">キャンセル</button>
         </div>
       </div>
     </main>
@@ -52,15 +59,19 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed, onMounted, watch } from 'vue'
+import { ref, computed, onMounted, nextTick } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import L from 'leaflet'
 import { useAreas } from '../composables/useAreas'
+import { useWallEditor } from '../composables/useWallEditor'
+import { deleteRouteRecord } from '../lib/areasRepository'
+import { isSupabaseConfigured } from '../lib/supabase'
 import type { Wall } from '../types'
 
 const routeParams = useRoute()
 const router = useRouter()
-const { areasData, loading, error, loadAreas, getArea } = useAreas()
+const { loading, error, loadAreas, getArea } = useAreas()
+const { saving, saveWall: persistWall } = useWallEditor()
 
 const areaId = computed(() => routeParams.params.areaId as string)
 const wallId = computed(() => routeParams.params.wallId as string)
@@ -75,23 +86,30 @@ let marker: L.Marker | null = null
 
 const currentWall = computed(() => {
   if (!isEdit.value || !area.value) return null
-  return area.value.walls.find(w => w.id === wallId.value)
+  return area.value.walls.find((w) => w.id === wallId.value)
 })
 
-onMounted(() => {
-  if (isEdit.value && currentWall.value) {
-    wallName.value = currentWall.value.name
-    selectedCoordinates.value = [...currentWall.value.coordinates]
+onMounted(async () => {
+  await loadAreas()
+  const w = currentWall.value
+  if (w) {
+    wallName.value = w.name
+    selectedCoordinates.value = [w.coordinates[0], w.coordinates[1]]
   }
-  loadAreas().then(() => {
-    initMap()
-  })
+  await nextTick()
+  initMap()
 })
 
 const initMap = () => {
   if (!mapContainer.value) return
 
-  map = L.map(mapContainer.value).setView([36.13, 140.00], 13)
+  if (map) {
+    map.remove()
+    map = null
+    marker = null
+  }
+
+  map = L.map(mapContainer.value).setView([36.13, 140.0], 13)
 
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '© OpenStreetMap contributors'
@@ -127,13 +145,21 @@ const editRoute = (routeId: string) => {
   router.push(`/admin/area/${areaId.value}/wall/${wallId.value}/route/${routeId}/edit`)
 }
 
-const deleteRoute = (routeId: string) => {
+const deleteRoute = async (routeId: string) => {
   if (!confirm('このルートを削除しますか？')) return
-  // TODO: 実際の削除処理を実装
-  alert('削除機能は実装中です（JSONファイルの直接編集が必要）')
+  if (!isSupabaseConfigured()) {
+    alert('Supabase が未設定のため削除できません。')
+    return
+  }
+  try {
+    await deleteRouteRecord(routeId)
+    await loadAreas()
+  } catch (e) {
+    alert(e instanceof Error ? e.message : '削除に失敗しました')
+  }
 }
 
-const saveWall = () => {
+const saveWall = async () => {
   if (!wallName.value.trim()) {
     alert('壁の名前を入力してください')
     return
@@ -142,15 +168,30 @@ const saveWall = () => {
     alert('地図上で壁の位置を選択してください')
     return
   }
+  if (!isSupabaseConfigured()) {
+    alert(
+      'Supabase が未設定のため保存できません。.env.example を参照し、マイグレーションを実行してください。'
+    )
+    return
+  }
 
-  // TODO: 実際の保存処理を実装（JSONファイルへの書き込み）
-  alert('保存機能は実装中です（JSONファイルの直接編集が必要）')
-  console.log('Wall data:', {
-    id: isEdit.value ? wallId.value : `wall_${Date.now()}`,
-    name: wallName.value,
-    coordinates: selectedCoordinates.value,
-    routes: isEdit.value && currentWall.value ? currentWall.value.routes : []
-  })
+  try {
+    const id = isEdit.value ? wallId.value : crypto.randomUUID()
+    await persistWall({
+      id,
+      areaId: areaId.value,
+      name: wallName.value.trim(),
+      coordinates: selectedCoordinates.value
+    })
+    await loadAreas()
+    if (!isEdit.value) {
+      await router.replace(`/admin/area/${areaId.value}/wall/${id}/edit`)
+    } else {
+      alert('保存しました')
+    }
+  } catch (e) {
+    alert(e instanceof Error ? e.message : '保存に失敗しました')
+  }
 }
 
 const goBack = () => {
