@@ -8,6 +8,12 @@
       <div v-if="loading" class="loading">読み込み中...</div>
       <div v-else-if="error" class="error">{{ error }}</div>
       <div v-else-if="!area" class="error">エリアが見つかりません</div>
+      <div v-else-if="wallNotFound" class="error">
+        壁が見つかりません（ID: {{ wallId }}）。URL が古いか、データが削除された可能性があります。
+        <div class="error-actions">
+          <button type="button" class="btn btn-secondary" @click="goBack">エリアの壁一覧へ</button>
+        </div>
+      </div>
       <div v-else class="editor-content">
         <div class="form-section">
           <label>
@@ -21,7 +27,16 @@
           </label>
           <div ref="mapContainer" class="map-container"></div>
           <div v-if="selectedCoordinates" class="coordinates">
-            選択された座標: {{ selectedCoordinates[0].toFixed(6) }}, {{ selectedCoordinates[1].toFixed(6) }}
+            壁の位置（緯度, 経度）: {{ selectedCoordinates[0].toFixed(6) }},
+            {{ selectedCoordinates[1].toFixed(6) }}
+          </div>
+          <div v-else-if="areaPolygonCentroid" class="coordinates coordinates-hint">
+            地図はエリア「{{ area?.name }}」（ID: {{ areaId }}）の polygon に合わせて表示しています。クリックで壁の座標を指定してください。<br />
+            目安（polygon の中心）: {{ areaPolygonCentroid[0].toFixed(6) }},
+            {{ areaPolygonCentroid[1].toFixed(6) }}
+          </div>
+          <div v-else-if="area" class="coordinates coordinates-hint">
+            エリア「{{ area?.name }}」（ID: {{ areaId }}）に polygon がありません。地図はデフォルト位置です。クリックで壁の座標を指定してください。
           </div>
         </div>
         <div class="form-section">
@@ -66,7 +81,29 @@ import { useAreas } from '../composables/useAreas'
 import { useWallEditor } from '../composables/useWallEditor'
 import { deleteRouteRecord } from '../lib/areasRepository'
 import { isSupabaseConfigured } from '../lib/supabase'
-import type { Wall } from '../types'
+import { MAP_AREA_DETAIL_FIT_PADDING } from '../lib/mapFit'
+import type { Area } from '../types'
+
+const DEFAULT_MAP_CENTER: [number, number] = [36.13, 140.0]
+const DEFAULT_MAP_ZOOM = 13
+
+function polygonBounds(polygon: Area['polygon']): L.LatLngBounds | null {
+  if (!polygon?.length) return null
+  const b = L.latLngBounds(polygon.map(([lat, lng]) => L.latLng(lat, lng)))
+  return b.isValid() ? b : null
+}
+
+function polygonCentroid(polygon: Area['polygon']): [number, number] | null {
+  if (!polygon?.length) return null
+  let slat = 0
+  let slng = 0
+  for (const [lat, lng] of polygon) {
+    slat += lat
+    slng += lng
+  }
+  const n = polygon.length
+  return [slat / n, slng / n]
+}
 
 const routeParams = useRoute()
 const router = useRouter()
@@ -89,6 +126,17 @@ const currentWall = computed(() => {
   return area.value.walls.find((w) => w.id === wallId.value)
 })
 
+/** 編集 URL だが該当壁がデータに存在しない（無効 ID・削除済みなど） */
+const wallNotFound = computed(
+  () => !loading.value && isEdit.value && !!area.value && !currentWall.value
+)
+
+/** 壁未選択時: 現在の areaId のエリア polygon の中心（地図 fitBounds と対応） */
+const areaPolygonCentroid = computed((): [number, number] | null => {
+  const poly = area.value?.polygon
+  return poly ? polygonCentroid(poly) : null
+})
+
 onMounted(async () => {
   await loadAreas()
   const w = currentWall.value
@@ -109,15 +157,32 @@ const initMap = () => {
     marker = null
   }
 
-  map = L.map(mapContainer.value).setView([36.13, 140.0], 13)
+  map = L.map(mapContainer.value)
 
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '© OpenStreetMap contributors'
   }).addTo(map)
 
+  let bounds = area.value?.polygon ? polygonBounds(area.value.polygon) : null
+
   if (selectedCoordinates.value) {
     marker = L.marker(selectedCoordinates.value).addTo(map)
+    if (!bounds) {
+      bounds = L.latLngBounds([selectedCoordinates.value])
+    } else {
+      bounds.extend(selectedCoordinates.value)
+    }
+  }
+
+  if (bounds?.isValid()) {
+    map.fitBounds(bounds, {
+      padding: MAP_AREA_DETAIL_FIT_PADDING,
+      maxZoom: 19
+    })
+  } else if (selectedCoordinates.value) {
     map.setView(selectedCoordinates.value, 15)
+  } else {
+    map.setView(DEFAULT_MAP_CENTER, DEFAULT_MAP_ZOOM)
   }
 
   map.on('click', (e: L.LeafletMouseEvent) => {
@@ -133,15 +198,19 @@ const initMap = () => {
 }
 
 const addNewRoute = () => {
-  if (!currentWall.value && !isEdit.value) {
+  if (!isEdit.value) {
     alert('まず壁を保存してください')
     return
   }
-  const targetWallId = isEdit.value ? wallId.value : 'new'
-  router.push(`/admin/area/${areaId.value}/wall/${targetWallId}/route/new`)
+  if (!currentWall.value) {
+    alert('壁データを読み込めませんでした。壁一覧からやり直してください。')
+    return
+  }
+  router.push(`/admin/area/${areaId.value}/wall/${wallId.value}/route/new`)
 }
 
 const editRoute = (routeId: string) => {
+  if (!wallId.value) return
   router.push(`/admin/area/${areaId.value}/wall/${wallId.value}/route/${routeId}/edit`)
 }
 
@@ -254,6 +323,10 @@ const goBack = () => {
   color: #d32f2f;
 }
 
+.error-actions {
+  margin-top: 1.25rem;
+}
+
 .editor-content {
   background: white;
   border-radius: 8px;
@@ -295,6 +368,15 @@ const goBack = () => {
   background: #f5f5f5;
   border-radius: 4px;
   font-family: monospace;
+}
+
+.coordinates-hint {
+  font-family: inherit;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #424242;
+  background: #e3f2fd;
+  border: 1px solid #90caf9;
 }
 
 .routes-list {

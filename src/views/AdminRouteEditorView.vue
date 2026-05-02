@@ -7,6 +7,13 @@
     <main class="main-content">
       <div v-if="loading" class="loading">読み込み中...</div>
       <div v-else-if="error" class="error">{{ error }}</div>
+      <div v-else-if="!areaResolved" class="error">エリアが見つかりません</div>
+      <div v-else-if="wallMissing" class="error">
+        壁が見つかりません。壁の管理画面からやり直してください。
+      </div>
+      <div v-else-if="routeMissing" class="error">
+        ルートが見つかりません。URL が古いか、データが削除された可能性があります。
+      </div>
       <div v-else class="editor-content">
         <div class="form-section">
           <label>
@@ -108,7 +115,7 @@ import type { Route, Line, Point, KeyPoint } from '../types'
 
 const routeParams = useRoute()
 const router = useRouter()
-const { loading, error, loadAreas, getRoute } = useAreas()
+const { loading, error, loadAreas, getArea, getWall, getRoute } = useAreas()
 const { saving: savingRoute, saveRoute: persistRouteToDb } = useRouteEditor()
 
 const showStorageUpload = computed(() => isSupabaseConfigured())
@@ -136,9 +143,21 @@ const currentVectors = ref<{
   keyPoints: []
 })
 
+const areaResolved = computed(() => getArea(areaId.value))
+
+const wallMissing = computed(() => {
+  if (!areaResolved.value || wallId.value === 'new') return false
+  return !getWall(areaId.value, wallId.value)
+})
+
 const currentRoute = computed(() => {
   if (!isEdit.value) return null
   return getRoute(areaId.value, wallId.value, routeId.value)
+})
+
+const routeMissing = computed(() => {
+  if (!isEdit.value || wallMissing.value || wallId.value === 'new') return false
+  return !currentRoute.value
 })
 
 onMounted(() => {

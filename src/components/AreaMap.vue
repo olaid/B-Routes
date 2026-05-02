@@ -6,6 +6,7 @@
 import { ref, onMounted, watch } from 'vue'
 import L from 'leaflet'
 import type { Area } from '../types'
+import { MAP_OVERVIEW_FIT_PADDING } from '../lib/mapFit'
 
 interface Props {
   areas: Area[]
@@ -68,7 +69,7 @@ const updateAreas = () => {
     const bounds = L.latLngBounds(
       props.areas.flatMap(area => area.polygon)
     )
-    map.fitBounds(bounds, { padding: [20, 20] })
+    map.fitBounds(bounds, { padding: MAP_OVERVIEW_FIT_PADDING })
   }
 }
 </script>

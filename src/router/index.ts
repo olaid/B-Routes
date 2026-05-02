@@ -37,7 +37,15 @@ const router = createRouter({
     {
       path: '/admin/area/:areaId/wall/:wallId/edit',
       name: 'admin-wall-edit',
-      component: AdminWallEditorView
+      component: AdminWallEditorView,
+      beforeEnter: (to) => {
+        if (to.params.wallId === 'new') {
+          return {
+            name: 'admin-wall-new',
+            params: { areaId: to.params.areaId as string }
+          }
+        }
+      }
     },
     {
       path: '/admin/area/:areaId/wall/:wallId/route/new',

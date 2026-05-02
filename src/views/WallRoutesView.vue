@@ -6,6 +6,16 @@
         <h1>{{ wall?.name || 'ルート一覧' }}</h1>
         <p v-if="area" class="area-label">{{ area.name }}</p>
       </div>
+      <router-link
+        v-if="wall && area"
+        class="header-admin-link"
+        :to="{
+          name: 'admin-wall-edit',
+          params: { areaId: areaId, wallId: wallId }
+        }"
+      >
+        壁・ルートを管理
+      </router-link>
     </header>
     <main class="main-content">
       <div v-if="loading" class="state">読み込み中...</div>
@@ -73,6 +83,26 @@ loadAreas()
   display: flex;
   align-items: center;
   gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.header-admin-link {
+  margin-left: auto;
+  padding: 0.45rem 0.95rem;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.95);
+  color: #115e59;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  white-space: nowrap;
+  transition: background 0.15s, color 0.15s;
+}
+
+.header-admin-link:hover {
+  background: #fff;
+  color: #0f766e;
 }
 
 .back-button {
@@ -177,6 +207,12 @@ loadAreas()
 @media (max-width: 480px) {
   .header-text h1 {
     font-size: 1.25rem;
+  }
+
+  .header-admin-link {
+    margin-left: 0;
+    width: 100%;
+    text-align: center;
   }
 
   .main-content {

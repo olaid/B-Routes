@@ -84,7 +84,7 @@ npm run preview
 ルートの画像は `public/images/routes/` ディレクトリに配置してください。
 `areas.json` の `imageUrl` フィールドで画像のパスを指定します。
 
-例: `/images/routes/route1.svg`（リポジトリにサンプル SVG を同梱）
+例: `/images/routes/route1.jpg`（写真を `public/images/routes/` に置き、ルート線はキャンバスで重ねる）
 
 ## 開発
 

@@ -6,6 +6,16 @@
         <h1>{{ route?.name || 'ルート詳細' }}</h1>
         <p v-if="route?.difficulty" class="difficulty">難易度: {{ route.difficulty }}</p>
       </div>
+      <router-link
+        v-if="route"
+        class="header-admin-link"
+        :to="{
+          name: 'admin-route-edit',
+          params: { areaId: areaId, wallId: wallId, routeId: routeId }
+        }"
+      >
+        このルートを編集
+      </router-link>
     </header>
     <main class="main-content">
       <div v-if="loading" class="loading">読み込み中...</div>
@@ -58,6 +68,26 @@ loadAreas()
   display: flex;
   align-items: center;
   gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.header-admin-link {
+  margin-left: auto;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.95);
+  color: #5b21b6;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  white-space: nowrap;
+  transition: background 0.2s, color 0.2s;
+}
+
+.header-admin-link:hover {
+  background: #fff;
+  color: #4c1d95;
 }
 
 .back-button {
@@ -129,6 +159,12 @@ loadAreas()
 
   .header h1 {
     font-size: 1.2rem;
+  }
+
+  .header-admin-link {
+    margin-left: 0;
+    width: 100%;
+    text-align: center;
   }
 
   .back-button {

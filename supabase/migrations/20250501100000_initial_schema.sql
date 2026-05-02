@@ -80,8 +80,8 @@ values (
   'wall1',
   'ルート1',
   'V3',
-  '/images/routes/route1.svg',
-  '{"lines":[{"points":[[0.2,0.8],[0.3,0.6],[0.5,0.4],[0.7,0.2]],"color":"#ff0000","width":3}],"startHolds":[{"position":[0.2,0.8],"type":"start","label":"S"}],"keyPoints":[{"position":[0.5,0.4],"description":"重要なポイント","icon":"star"}]}'::jsonb,
+  '/images/routes/route1.jpg',
+  '{"lines":[{"points":[[0.2,0.8],[0.3,0.7],[0.4,0.6],[0.5,0.5],[0.6,0.4],[0.7,0.3],[0.8,0.2]],"color":"#ff0000","width":3}],"startHolds":[{"position":[0.2,0.8],"type":"start","label":"S"},{"position":[0.3,0.7],"type":"hold","label":"1"},{"position":[0.4,0.6],"type":"hold","label":"2"},{"position":[0.5,0.5],"type":"hold","label":"3"},{"position":[0.6,0.4],"type":"hold","label":"4"},{"position":[0.7,0.3],"type":"hold","label":"5"},{"position":[0.8,0.2],"type":"finish","label":"F"}],"keyPoints":[{"position":[0.125,0.3333],"description":"壁ホールド（オフルート・参考）","icon":"wall"},{"position":[0.875,0.8333],"description":"壁ホールド（オフルート・参考）","icon":"wall"},{"position":[0.65,0.8667],"description":"壁ホールド（オフルート・参考）","icon":"wall"}]}'::jsonb,
   'サンプルルート1の説明',
   0
 )
@@ -93,7 +93,7 @@ values (
   'wall1',
   'ルート2',
   'V4',
-  '/images/routes/route1.svg',
+  '/images/routes/route1.jpg',
   '{"lines":[],"startHolds":[],"keyPoints":[]}'::jsonb,
   '2本目のサンプル',
   1

@@ -3,16 +3,20 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, watch } from 'vue'
+import { ref, onMounted, watch, nextTick } from 'vue'
 import L from 'leaflet'
 import type { Wall } from '../types'
+import { MAP_AREA_DETAIL_FIT_PADDING } from '../lib/mapFit'
 
 interface Props {
   walls: Wall[]
+  /** 壁が0件のときのみ fitBounds に使う（現状 UI では未使用） */
+  areaPolygon?: [number, number][]
   onWallClick?: (wall: Wall) => void
 }
 
 const props = withDefaults(defineProps<Props>(), {
+  areaPolygon: undefined,
   onWallClick: undefined
 })
 
@@ -20,30 +24,35 @@ const mapContainer = ref<HTMLDivElement | null>(null)
 let map: L.Map | null = null
 const markers: L.Marker[] = []
 
-onMounted(() => {
-  if (!mapContainer.value) return
+/** 壁がエリア内に収まっていると「ポリゴン＋壁」の bounds がトップのエリア矩形と一致し倍率が変わらないため、壁があるときは壁だけを基準に fit する */
+function applyBounds() {
+  if (!map) return
 
-  map = L.map(mapContainer.value).setView([36.13, 140.00], 13)
+  let bounds: L.LatLngBounds | null = null
 
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '© OpenStreetMap contributors'
-  }).addTo(map)
+  if (props.walls.length > 0) {
+    bounds = L.latLngBounds(props.walls.map(w => w.coordinates))
+    if (bounds.getSouthWest().equals(bounds.getNorthEast())) {
+      bounds = bounds.pad(0.004)
+    }
+  } else if (props.areaPolygon && props.areaPolygon.length >= 3) {
+    bounds = L.latLngBounds(props.areaPolygon as L.LatLngExpression[])
+  }
 
-  updateWalls()
-})
-
-watch(() => props.walls, () => {
-  updateWalls()
-}, { deep: true })
+  if (bounds?.isValid()) {
+    map.fitBounds(bounds, {
+      padding: MAP_AREA_DETAIL_FIT_PADDING,
+      maxZoom: 19
+    })
+  }
+}
 
 const updateWalls = () => {
   if (!map) return
 
-  // 既存のマーカーを削除
-  markers.forEach(marker => marker.remove())
+  markers.forEach(m => m.remove())
   markers.length = 0
 
-  // 壁のマーカーを表示
   props.walls.forEach(wall => {
     const marker = L.marker(wall.coordinates).addTo(map!)
 
@@ -58,14 +67,31 @@ const updateWalls = () => {
     markers.push(marker)
   })
 
-  // すべての壁が表示されるようにズーム調整
-  if (props.walls.length > 0) {
-    const bounds = L.latLngBounds(
-      props.walls.map(wall => wall.coordinates)
-    )
-    map.fitBounds(bounds, { padding: [50, 50] })
-  }
+  applyBounds()
 }
+
+onMounted(async () => {
+  if (!mapContainer.value) return
+
+  map = L.map(mapContainer.value).setView([36.13, 140.0], 13)
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '© OpenStreetMap contributors'
+  }).addTo(map)
+
+  await nextTick()
+  updateWalls()
+  requestAnimationFrame(() => {
+    map?.invalidateSize({ animate: false })
+    applyBounds()
+  })
+})
+
+watch(
+  () => ({ walls: props.walls, areaPolygon: props.areaPolygon }),
+  () => updateWalls(),
+  { deep: true }
+)
 </script>
 
 <style scoped>
@@ -87,4 +113,3 @@ const updateWalls = () => {
   }
 }
 </style>
-
