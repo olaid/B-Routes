@@ -1,0 +1,282 @@
+{
+  "areas": [
+    {
+      "id": "ik-bakudai",
+      "name": "崩落地周辺（仮）",
+      "polygon": [
+        [36.394008, 140.168023],
+        [36.394008, 140.169478],
+        [36.395402, 140.169478],
+        [36.395402, 140.168023]
+      ],
+      "walls": [
+        { "id": "ik-bakudai-w001", "name": "尖峰岩", "coordinates": [36.394526, 140.169028], "routes": [] },
+        { "id": "ik-bakudai-w002", "name": "019（仮）", "coordinates": [36.394655, 140.168178], "routes": [] },
+        { "id": "ik-bakudai-w003", "name": "彷徨い岩", "coordinates": [36.394358, 140.168906], "routes": [] },
+        { "id": "ik-bakudai-w004", "name": "021（仮）", "coordinates": [36.394894, 140.168534], "routes": [] },
+        { "id": "ik-bakudai-w005", "name": "020（仮）", "coordinates": [36.394884, 140.168541], "routes": [] },
+        { "id": "ik-bakudai-w006", "name": "023（仮）", "coordinates": [36.39492, 140.168536], "routes": [] },
+        { "id": "ik-bakudai-w007", "name": "017（仮）", "coordinates": [36.394711, 140.168601], "routes": [] },
+        { "id": "ik-bakudai-w008", "name": "018（仮）", "coordinates": [36.394717, 140.168599], "routes": [] },
+        { "id": "ik-bakudai-w009", "name": "024（仮）", "coordinates": [36.394961, 140.168473], "routes": [] },
+        { "id": "ik-bakudai-w010", "name": "022（仮）", "coordinates": [36.394895, 140.168534], "routes": [] },
+        { "id": "ik-bakudai-w011", "name": "059（仮）", "coordinates": [36.395052, 140.168641], "routes": [] },
+        { "id": "ik-bakudai-w012", "name": "095（仮）", "coordinates": [36.394441, 140.168736], "routes": [] },
+        { "id": "ik-bakudai-w013", "name": "096（仮）", "coordinates": [36.394441, 140.168736], "routes": [] }
+      ]
+    },
+    {
+      "id": "ik-hike",
+      "name": "ハイキング道周辺",
+      "polygon": [
+        [36.391606, 140.169216],
+        [36.391606, 140.171235],
+        [36.393839, 140.171235],
+        [36.393839, 140.169216]
+      ],
+      "walls": [
+        { "id": "ik-hike-w001", "name": "002（仮）", "coordinates": [36.392642, 140.169666], "routes": [] },
+        { "id": "ik-hike-w002", "name": "003（仮）", "coordinates": [36.392642, 140.169666], "routes": [] },
+        { "id": "ik-hike-w003", "name": "093（仮)", "coordinates": [36.392979, 140.169754], "routes": [] },
+        { "id": "ik-hike-w004", "name": "094（仮)", "coordinates": [36.392954, 140.169728], "routes": [] },
+        { "id": "ik-hike-w005", "name": "098（仮）", "coordinates": [36.393252, 140.170628], "routes": [] },
+        { "id": "ik-hike-w006", "name": "099（仮）", "coordinates": [36.393489, 140.170785], "routes": [] },
+        { "id": "ik-hike-w007", "name": "111（仮）", "coordinates": [36.391956, 140.169995], "routes": [] }
+      ]
+    },
+    {
+      "id": "ik-hike-up",
+      "name": "ハイキング道周辺上",
+      "polygon": [
+        [36.393344, 140.171085],
+        [36.393344, 140.172819],
+        [36.395586, 140.172819],
+        [36.395586, 140.171085]
+      ],
+      "walls": [
+        { "id": "ik-hike-up-w001", "name": "100（仮）", "coordinates": [36.393694, 140.171535], "routes": [] },
+        { "id": "ik-hike-up-w002", "name": "101（仮）", "coordinates": [36.393955, 140.171769], "routes": [] },
+        { "id": "ik-hike-up-w003", "name": "102（仮）", "coordinates": [36.394343, 140.172229], "routes": [] },
+        { "id": "ik-hike-up-w004", "name": "103（仮）", "coordinates": [36.394538, 140.172325], "routes": [] },
+        { "id": "ik-hike-up-w005", "name": "104（仮）", "coordinates": [36.39458, 140.172369], "routes": [] },
+        { "id": "ik-hike-up-w006", "name": "105（仮）", "coordinates": [36.394762, 140.172357], "routes": [] },
+        { "id": "ik-hike-up-w007", "name": "106（仮）", "coordinates": [36.395236, 140.171926], "routes": [] }
+      ]
+    },
+    {
+      "id": "ik-higashi-one",
+      "name": "東尾根（仮）",
+      "polygon": [
+        [36.378922, 140.161429],
+        [36.378922, 140.171274],
+        [36.396219, 140.171274],
+        [36.396219, 140.161429]
+      ],
+      "walls": [
+        { "id": "ik-higashi-one-w001", "name": "テルテル岩", "coordinates": [36.394262, 140.169638], "routes": [] },
+        { "id": "ik-higashi-one-w002", "name": "012（仮）", "coordinates": [36.393937, 140.169588], "routes": [] },
+        { "id": "ik-higashi-one-w003", "name": "011（仮）", "coordinates": [36.393896, 140.169782], "routes": [] },
+        { "id": "ik-higashi-one-w004", "name": "010（仮）", "coordinates": [36.393808, 140.169908], "routes": [] },
+        { "id": "ik-higashi-one-w005", "name": "014（仮）", "coordinates": [36.393995, 140.169487], "routes": [] },
+        { "id": "ik-higashi-one-w006", "name": "013（仮）", "coordinates": [36.393998, 140.168], "routes": [] },
+        { "id": "ik-higashi-one-w007", "name": "013周辺（仮）", "coordinates": [36.380814, 140.162506], "routes": [] },
+        { "id": "ik-higashi-one-w008", "name": "092（仮)", "coordinates": [36.393524, 140.170197], "routes": [] },
+        { "id": "ik-higashi-one-w009", "name": "109（仮）", "coordinates": [36.394327, 140.169402], "routes": [] },
+        { "id": "ik-higashi-one-w010", "name": "110（仮）", "coordinates": [36.394322, 140.169324], "routes": [] }
+      ]
+    },
+    {
+      "id": "ik-higashi",
+      "name": "東エリア（仮）",
+      "polygon": [
+        [36.393906, 140.169216],
+        [36.393906, 140.171048],
+        [36.396576, 140.171048],
+        [36.396576, 140.169216]
+      ],
+      "walls": [
+        { "id": "ik-higashi-w001", "name": "029（仮）", "coordinates": [36.395059, 140.169825], "routes": [] },
+        { "id": "ik-higashi-w002", "name": "032（仮）", "coordinates": [36.395198, 140.170161], "routes": [] },
+        { "id": "ik-higashi-w003", "name": "035（仮）", "coordinates": [36.3952, 140.170417], "routes": [] },
+        { "id": "ik-higashi-w004", "name": "026（仮）", "coordinates": [36.394881, 140.170009], "routes": [] },
+        { "id": "ik-higashi-w005", "name": "025（仮）", "coordinates": [36.394884, 140.170024], "routes": [] },
+        { "id": "ik-higashi-w006", "name": "030（仮）", "coordinates": [36.395059, 140.169825], "routes": [] },
+        { "id": "ik-higashi-w007", "name": "034（仮）", "coordinates": [36.395466, 140.170598], "routes": [] },
+        { "id": "ik-higashi-w008", "name": "027（仮）", "coordinates": [36.394882, 140.17002], "routes": [] },
+        { "id": "ik-higashi-w009", "name": "028（仮）", "coordinates": [36.394951, 140.170007], "routes": [] },
+        { "id": "ik-higashi-w010", "name": "031（仮）", "coordinates": [36.395132, 140.169666], "routes": [] },
+        { "id": "ik-higashi-w011", "name": "036（仮）", "coordinates": [36.396016, 140.170459], "routes": [] },
+        { "id": "ik-higashi-w012", "name": "037（仮）", "coordinates": [36.396226, 140.169739], "routes": [] },
+        { "id": "ik-higashi-w013", "name": "079（仮)", "coordinates": [36.394742, 140.17041], "routes": [] },
+        { "id": "ik-higashi-w014", "name": "080（仮)", "coordinates": [36.394867, 140.170231], "routes": [] },
+        { "id": "ik-higashi-w015", "name": "081（仮)", "coordinates": [36.394992, 140.170356], "routes": [] },
+        { "id": "ik-higashi-w016", "name": "107（仮）", "coordinates": [36.394256, 140.170428], "routes": [] }
+      ]
+    },
+    {
+      "id": "ik-mori",
+      "name": "森エリア（仮）",
+      "polygon": [
+        [36.379558, 140.159725],
+        [36.379558, 140.17045],
+        [36.395535, 140.17045],
+        [36.395535, 140.159725]
+      ],
+      "walls": [
+        { "id": "ik-mori-w001", "name": "007～008（仮）", "coordinates": [36.381316, 140.160898], "routes": [] },
+        { "id": "ik-mori-w002", "name": "やすり岩", "coordinates": [36.393601, 140.168975], "routes": [] },
+        { "id": "ik-mori-w003", "name": "柚子岩", "coordinates": [36.393588, 140.168939], "routes": [] },
+        { "id": "ik-mori-w004", "name": "004（仮）", "coordinates": [36.393338, 140.168779], "routes": [] },
+        { "id": "ik-mori-w005", "name": "せせらぎ右岩", "coordinates": [36.393667, 140.168428], "routes": [] },
+        { "id": "ik-mori-w006", "name": "せせらぎ左岩", "coordinates": [36.393695, 140.168393], "routes": [] },
+        { "id": "ik-mori-w007", "name": "イノシシ岩", "coordinates": [36.393877, 140.168175], "routes": [] },
+        { "id": "ik-mori-w008", "name": "甲羅岩", "coordinates": [36.393787, 140.168656], "routes": [] },
+        { "id": "ik-mori-w009", "name": "頭岩", "coordinates": [36.393828, 140.168725], "routes": [] },
+        { "id": "ik-mori-w010", "name": "せせらぎ下岩", "coordinates": [36.393584, 140.168392], "routes": [] },
+        { "id": "ik-mori-w011", "name": "097", "coordinates": [36.393051, 140.169277], "routes": [] },
+        { "id": "ik-mori-w012", "name": "108（仮）", "coordinates": [36.39371, 140.169216], "routes": [] }
+      ]
+    },
+    {
+      "id": "ik-tani-ue",
+      "name": "谷広場上（仮）",
+      "polygon": [
+        [36.355892, 140.140698],
+        [36.355892, 140.172521],
+        [36.402069, 140.172521],
+        [36.402069, 140.140698]
+      ],
+      "walls": [
+        { "id": "ik-tani-ue-w001", "name": "048（仮）", "coordinates": [36.396273, 140.16829], "routes": [] },
+        { "id": "ik-tani-ue-w002", "name": "048周辺（仮）", "coordinates": [36.360942, 140.144178], "routes": [] },
+        { "id": "ik-tani-ue-w003", "name": "060（仮）", "coordinates": [36.396583, 140.168467], "routes": [] },
+        { "id": "ik-tani-ue-w004", "name": "062（仮）", "coordinates": [36.397019, 140.16837], "routes": [] },
+        { "id": "ik-tani-ue-w005", "name": "063（仮）", "coordinates": [36.396756, 140.169041], "routes": [] },
+        { "id": "ik-tani-ue-w006", "name": "064（仮）", "coordinates": [36.396618, 140.16896], "routes": [] }
+      ]
+    },
+    {
+      "id": "ik-nishi",
+      "name": "西エリア（仮）",
+      "polygon": [
+        [36.355958, 140.140871],
+        [36.355958, 140.171107],
+        [36.401525, 140.171107],
+        [36.401525, 140.140871]
+      ],
+      "walls": [
+        { "id": "ik-nishi-w001", "name": "044（仮）", "coordinates": [36.395966, 140.167337], "routes": [] },
+        { "id": "ik-nishi-w002", "name": "045（仮）", "coordinates": [36.396063, 140.167303], "routes": [] },
+        { "id": "ik-nishi-w003", "name": "046（仮）", "coordinates": [36.396149, 140.167245], "routes": [] },
+        { "id": "ik-nishi-w004", "name": "041（仮）", "coordinates": [36.395537, 140.167533], "routes": [] },
+        { "id": "ik-nishi-w005", "name": "049（仮）", "coordinates": [36.396541, 140.167327], "routes": [] },
+        { "id": "ik-nishi-w006", "name": "043（仮）", "coordinates": [36.395774, 140.167349], "routes": [] },
+        { "id": "ik-nishi-w007", "name": "044周辺2（仮）", "coordinates": [36.360942, 140.144178], "routes": [] },
+        { "id": "ik-nishi-w008", "name": "044周辺1（仮）", "coordinates": [36.360942, 140.144178], "routes": [] },
+        { "id": "ik-nishi-w009", "name": "050（仮）", "coordinates": [36.39654, 140.167364], "routes": [] },
+        { "id": "ik-nishi-w010", "name": "047（仮）", "coordinates": [36.396315, 140.167112], "routes": [] },
+        { "id": "ik-nishi-w011", "name": "042（仮）", "coordinates": [36.395735, 140.167266], "routes": [] },
+        { "id": "ik-nishi-w012", "name": "058（仮）", "coordinates": [36.395248, 140.167471], "routes": [] },
+        { "id": "ik-nishi-w013", "name": "068（仮)", "coordinates": [36.396407, 140.1678], "routes": [] },
+        { "id": "ik-nishi-w014", "name": "072（仮)", "coordinates": [36.395025, 140.167238], "routes": [] }
+      ]
+    },
+    {
+      "id": "ik-tani",
+      "name": "谷広場（仮）",
+      "polygon": [
+        [36.394987, 140.167813],
+        [36.394987, 140.169764],
+        [36.396406, 140.169764],
+        [36.396406, 140.167813]
+      ],
+      "walls": [
+        { "id": "ik-tani-w001", "name": "040（仮）", "coordinates": [36.395905, 140.168686], "routes": [] },
+        { "id": "ik-tani-w002", "name": "033（仮）", "coordinates": [36.395337, 140.169123], "routes": [] },
+        { "id": "ik-tani-w003", "name": "038（仮）", "coordinates": [36.395906, 140.168764], "routes": [] },
+        { "id": "ik-tani-w004", "name": "039（仮）", "coordinates": [36.395906, 140.168764], "routes": [] },
+        { "id": "ik-tani-w005", "name": "矢穴岩", "coordinates": [36.395413, 140.16898], "routes": [] },
+        { "id": "ik-tani-w006", "name": "033周辺2（仮）", "coordinates": [36.395413, 140.16898], "routes": [] },
+        { "id": "ik-tani-w007", "name": "妥当岩", "coordinates": [36.395413, 140.16898], "routes": [] },
+        { "id": "ik-tani-w008", "name": "065（仮）", "coordinates": [36.396056, 140.169261], "routes": [] },
+        { "id": "ik-tani-w009", "name": "066（仮）", "coordinates": [36.395961, 140.169314], "routes": [] },
+        { "id": "ik-tani-w010", "name": "067（仮)", "coordinates": [36.395577, 140.168263], "routes": [] },
+        { "id": "ik-tani-w011", "name": "071（仮)", "coordinates": [36.395612, 140.168633], "routes": [] }
+      ]
+    },
+    {
+      "id": "ik-hokusei",
+      "name": "北西エリア（仮）",
+      "polygon": [
+        [36.396669, 140.16694],
+        [36.396669, 140.16882],
+        [36.398195, 140.16882],
+        [36.398195, 140.16694]
+      ],
+      "walls": [
+        { "id": "ik-hokusei-w001", "name": "054（仮）", "coordinates": [36.397382, 140.168115], "routes": [] },
+        { "id": "ik-hokusei-w002", "name": "051（仮）", "coordinates": [36.397073, 140.16739], "routes": [] },
+        { "id": "ik-hokusei-w003", "name": "052（仮）", "coordinates": [36.397066, 140.167876], "routes": [] },
+        { "id": "ik-hokusei-w004", "name": "053（仮）", "coordinates": [36.397189, 140.167831], "routes": [] },
+        { "id": "ik-hokusei-w005", "name": "061（仮）", "coordinates": [36.397019, 140.16837], "routes": [] },
+        { "id": "ik-hokusei-w006", "name": "069（仮)", "coordinates": [36.397845, 140.168236], "routes": [] }
+      ]
+    },
+    {
+      "id": "ik-misc",
+      "name": "その他",
+      "polygon": [
+        [36.397342, 140.166861],
+        [36.397342, 140.171335],
+        [36.398166, 140.171335],
+        [36.398166, 140.166861]
+      ],
+      "walls": [
+        { "id": "ik-misc-w001", "name": "055（仮）", "coordinates": [36.397692, 140.170846], "routes": [] },
+        { "id": "ik-misc-w002", "name": "056（仮）", "coordinates": [36.397772, 140.16735], "routes": [] },
+        { "id": "ik-misc-w003", "name": "070（仮)", "coordinates": [36.397816, 140.169626], "routes": [] }
+      ]
+    },
+    {
+      "id": "ik-nishi-kyu",
+      "name": "西急登（仮）",
+      "polygon": [
+        [36.393946, 140.165615],
+        [36.393946, 140.168127],
+        [36.394819, 140.168127],
+        [36.394819, 140.165615]
+      ],
+      "walls": [
+        { "id": "ik-nishi-kyu-w001", "name": "008（仮）", "coordinates": [36.393703, 140.167677], "routes": [] },
+        { "id": "ik-nishi-kyu-w002", "name": "073（仮)", "coordinates": [36.394469, 140.167022], "routes": [] },
+        { "id": "ik-nishi-kyu-w003", "name": "074（仮)", "coordinates": [36.394296, 140.166888], "routes": [] },
+        { "id": "ik-nishi-kyu-w004", "name": "075（仮)", "coordinates": [36.394451, 140.166065], "routes": [] }
+      ]
+    },
+    {
+      "id": "ik-ishigaki",
+      "name": "石垣エリア",
+      "polygon": [
+        [36.393707, 140.17017],
+        [36.393707, 140.171654],
+        [36.395635, 140.171654],
+        [36.395635, 140.17017]
+      ],
+      "walls": [
+        { "id": "ik-ishigaki-w001", "name": "076（仮)", "coordinates": [36.394341, 140.170652], "routes": [] },
+        { "id": "ik-ishigaki-w002", "name": "077（仮)", "coordinates": [36.394341, 140.170652], "routes": [] },
+        { "id": "ik-ishigaki-w003", "name": "078（仮)", "coordinates": [36.394361, 140.17062], "routes": [] },
+        { "id": "ik-ishigaki-w004", "name": "082（仮)", "coordinates": [36.395135, 140.170789], "routes": [] },
+        { "id": "ik-ishigaki-w005", "name": "083（仮)", "coordinates": [36.395285, 140.17098], "routes": [] },
+        { "id": "ik-ishigaki-w006", "name": "084（仮)", "coordinates": [36.395208, 140.170958], "routes": [] },
+        { "id": "ik-ishigaki-w007", "name": "085（仮)", "coordinates": [36.394844, 140.171204], "routes": [] },
+        { "id": "ik-ishigaki-w008", "name": "086（仮)", "coordinates": [36.394801, 140.171154], "routes": [] },
+        { "id": "ik-ishigaki-w009", "name": "087（仮)", "coordinates": [36.394801, 140.171154], "routes": [] },
+        { "id": "ik-ishigaki-w010", "name": "088（仮)", "coordinates": [36.39472, 140.170837], "routes": [] },
+        { "id": "ik-ishigaki-w011", "name": "089（仮)", "coordinates": [36.394523, 140.170788], "routes": [] },
+        { "id": "ik-ishigaki-w012", "name": "090（仮)", "coordinates": [36.394335, 140.170859], "routes": [] },
+        { "id": "ik-ishigaki-w013", "name": "091（仮)", "coordinates": [36.394057, 140.170992], "routes": [] }
+      ]
+    }
+  ]
+}

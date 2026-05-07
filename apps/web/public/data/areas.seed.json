@@ -1,0 +1,1819 @@
+{
+  "areas": [
+    {
+      "id": "ik-bakudai",
+      "slug": "ik-bakudai",
+      "name": "崩落地周辺（仮）",
+      "polygon": [
+        [
+          36.394008,
+          140.168023
+        ],
+        [
+          36.394008,
+          140.169478
+        ],
+        [
+          36.395402,
+          140.169478
+        ],
+        [
+          36.395402,
+          140.168023
+        ]
+      ],
+      "visibility": "public",
+      "status": "published",
+      "walls": [
+        {
+          "id": "ik-bakudai-w001",
+          "areaId": "ik-bakudai",
+          "name": "尖峰岩",
+          "coordinates": [
+            36.394526,
+            140.169028
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-bakudai-w002",
+          "areaId": "ik-bakudai",
+          "name": "019（仮）",
+          "coordinates": [
+            36.394655,
+            140.168178
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-bakudai-w003",
+          "areaId": "ik-bakudai",
+          "name": "彷徨い岩",
+          "coordinates": [
+            36.394358,
+            140.168906
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-bakudai-w004",
+          "areaId": "ik-bakudai",
+          "name": "021（仮）",
+          "coordinates": [
+            36.394894,
+            140.168534
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-bakudai-w005",
+          "areaId": "ik-bakudai",
+          "name": "020（仮）",
+          "coordinates": [
+            36.394884,
+            140.168541
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-bakudai-w006",
+          "areaId": "ik-bakudai",
+          "name": "023（仮）",
+          "coordinates": [
+            36.39492,
+            140.168536
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-bakudai-w007",
+          "areaId": "ik-bakudai",
+          "name": "017（仮）",
+          "coordinates": [
+            36.394711,
+            140.168601
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-bakudai-w008",
+          "areaId": "ik-bakudai",
+          "name": "018（仮）",
+          "coordinates": [
+            36.394717,
+            140.168599
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-bakudai-w009",
+          "areaId": "ik-bakudai",
+          "name": "024（仮）",
+          "coordinates": [
+            36.394961,
+            140.168473
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-bakudai-w010",
+          "areaId": "ik-bakudai",
+          "name": "022（仮）",
+          "coordinates": [
+            36.394895,
+            140.168534
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-bakudai-w011",
+          "areaId": "ik-bakudai",
+          "name": "059（仮）",
+          "coordinates": [
+            36.395052,
+            140.168641
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-bakudai-w012",
+          "areaId": "ik-bakudai",
+          "name": "095（仮）",
+          "coordinates": [
+            36.394441,
+            140.168736
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-bakudai-w013",
+          "areaId": "ik-bakudai",
+          "name": "096（仮）",
+          "coordinates": [
+            36.394441,
+            140.168736
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        }
+      ]
+    },
+    {
+      "id": "ik-hike",
+      "slug": "ik-hike",
+      "name": "ハイキング道周辺",
+      "polygon": [
+        [
+          36.391606,
+          140.169216
+        ],
+        [
+          36.391606,
+          140.171235
+        ],
+        [
+          36.393839,
+          140.171235
+        ],
+        [
+          36.393839,
+          140.169216
+        ]
+      ],
+      "visibility": "public",
+      "status": "published",
+      "walls": [
+        {
+          "id": "ik-hike-w001",
+          "areaId": "ik-hike",
+          "name": "002（仮）",
+          "coordinates": [
+            36.392642,
+            140.169666
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-hike-w002",
+          "areaId": "ik-hike",
+          "name": "003（仮）",
+          "coordinates": [
+            36.392642,
+            140.169666
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-hike-w003",
+          "areaId": "ik-hike",
+          "name": "093（仮)",
+          "coordinates": [
+            36.392979,
+            140.169754
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-hike-w004",
+          "areaId": "ik-hike",
+          "name": "094（仮)",
+          "coordinates": [
+            36.392954,
+            140.169728
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-hike-w005",
+          "areaId": "ik-hike",
+          "name": "098（仮）",
+          "coordinates": [
+            36.393252,
+            140.170628
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-hike-w006",
+          "areaId": "ik-hike",
+          "name": "099（仮）",
+          "coordinates": [
+            36.393489,
+            140.170785
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-hike-w007",
+          "areaId": "ik-hike",
+          "name": "111（仮）",
+          "coordinates": [
+            36.391956,
+            140.169995
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        }
+      ]
+    },
+    {
+      "id": "ik-hike-up",
+      "slug": "ik-hike-up",
+      "name": "ハイキング道周辺上",
+      "polygon": [
+        [
+          36.393344,
+          140.171085
+        ],
+        [
+          36.393344,
+          140.172819
+        ],
+        [
+          36.395586,
+          140.172819
+        ],
+        [
+          36.395586,
+          140.171085
+        ]
+      ],
+      "visibility": "public",
+      "status": "published",
+      "walls": [
+        {
+          "id": "ik-hike-up-w001",
+          "areaId": "ik-hike-up",
+          "name": "100（仮）",
+          "coordinates": [
+            36.393694,
+            140.171535
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-hike-up-w002",
+          "areaId": "ik-hike-up",
+          "name": "101（仮）",
+          "coordinates": [
+            36.393955,
+            140.171769
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-hike-up-w003",
+          "areaId": "ik-hike-up",
+          "name": "102（仮）",
+          "coordinates": [
+            36.394343,
+            140.172229
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-hike-up-w004",
+          "areaId": "ik-hike-up",
+          "name": "103（仮）",
+          "coordinates": [
+            36.394538,
+            140.172325
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-hike-up-w005",
+          "areaId": "ik-hike-up",
+          "name": "104（仮）",
+          "coordinates": [
+            36.39458,
+            140.172369
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-hike-up-w006",
+          "areaId": "ik-hike-up",
+          "name": "105（仮）",
+          "coordinates": [
+            36.394762,
+            140.172357
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-hike-up-w007",
+          "areaId": "ik-hike-up",
+          "name": "106（仮）",
+          "coordinates": [
+            36.395236,
+            140.171926
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        }
+      ]
+    },
+    {
+      "id": "ik-higashi-one",
+      "slug": "ik-higashi-one",
+      "name": "東尾根（仮）",
+      "polygon": [
+        [
+          36.378922,
+          140.161429
+        ],
+        [
+          36.378922,
+          140.171274
+        ],
+        [
+          36.396219,
+          140.171274
+        ],
+        [
+          36.396219,
+          140.161429
+        ]
+      ],
+      "visibility": "public",
+      "status": "published",
+      "walls": [
+        {
+          "id": "ik-higashi-one-w001",
+          "areaId": "ik-higashi-one",
+          "name": "テルテル岩",
+          "coordinates": [
+            36.394262,
+            140.169638
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-higashi-one-w002",
+          "areaId": "ik-higashi-one",
+          "name": "012（仮）",
+          "coordinates": [
+            36.393937,
+            140.169588
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-higashi-one-w003",
+          "areaId": "ik-higashi-one",
+          "name": "011（仮）",
+          "coordinates": [
+            36.393896,
+            140.169782
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-higashi-one-w004",
+          "areaId": "ik-higashi-one",
+          "name": "010（仮）",
+          "coordinates": [
+            36.393808,
+            140.169908
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-higashi-one-w005",
+          "areaId": "ik-higashi-one",
+          "name": "014（仮）",
+          "coordinates": [
+            36.393995,
+            140.169487
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-higashi-one-w006",
+          "areaId": "ik-higashi-one",
+          "name": "013（仮）",
+          "coordinates": [
+            36.393998,
+            140.168
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-higashi-one-w007",
+          "areaId": "ik-higashi-one",
+          "name": "013周辺（仮）",
+          "coordinates": [
+            36.380814,
+            140.162506
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-higashi-one-w008",
+          "areaId": "ik-higashi-one",
+          "name": "092（仮)",
+          "coordinates": [
+            36.393524,
+            140.170197
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-higashi-one-w009",
+          "areaId": "ik-higashi-one",
+          "name": "109（仮）",
+          "coordinates": [
+            36.394327,
+            140.169402
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-higashi-one-w010",
+          "areaId": "ik-higashi-one",
+          "name": "110（仮）",
+          "coordinates": [
+            36.394322,
+            140.169324
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        }
+      ]
+    },
+    {
+      "id": "ik-higashi",
+      "slug": "ik-higashi",
+      "name": "東エリア（仮）",
+      "polygon": [
+        [
+          36.393906,
+          140.169216
+        ],
+        [
+          36.393906,
+          140.171048
+        ],
+        [
+          36.396576,
+          140.171048
+        ],
+        [
+          36.396576,
+          140.169216
+        ]
+      ],
+      "visibility": "public",
+      "status": "published",
+      "walls": [
+        {
+          "id": "ik-higashi-w001",
+          "areaId": "ik-higashi",
+          "name": "029（仮）",
+          "coordinates": [
+            36.395059,
+            140.169825
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-higashi-w002",
+          "areaId": "ik-higashi",
+          "name": "032（仮）",
+          "coordinates": [
+            36.395198,
+            140.170161
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-higashi-w003",
+          "areaId": "ik-higashi",
+          "name": "035（仮）",
+          "coordinates": [
+            36.3952,
+            140.170417
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-higashi-w004",
+          "areaId": "ik-higashi",
+          "name": "026（仮）",
+          "coordinates": [
+            36.394881,
+            140.170009
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-higashi-w005",
+          "areaId": "ik-higashi",
+          "name": "025（仮）",
+          "coordinates": [
+            36.394884,
+            140.170024
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-higashi-w006",
+          "areaId": "ik-higashi",
+          "name": "030（仮）",
+          "coordinates": [
+            36.395059,
+            140.169825
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-higashi-w007",
+          "areaId": "ik-higashi",
+          "name": "034（仮）",
+          "coordinates": [
+            36.395466,
+            140.170598
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-higashi-w008",
+          "areaId": "ik-higashi",
+          "name": "027（仮）",
+          "coordinates": [
+            36.394882,
+            140.17002
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-higashi-w009",
+          "areaId": "ik-higashi",
+          "name": "028（仮）",
+          "coordinates": [
+            36.394951,
+            140.170007
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-higashi-w010",
+          "areaId": "ik-higashi",
+          "name": "031（仮）",
+          "coordinates": [
+            36.395132,
+            140.169666
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-higashi-w011",
+          "areaId": "ik-higashi",
+          "name": "036（仮）",
+          "coordinates": [
+            36.396016,
+            140.170459
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-higashi-w012",
+          "areaId": "ik-higashi",
+          "name": "037（仮）",
+          "coordinates": [
+            36.396226,
+            140.169739
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-higashi-w013",
+          "areaId": "ik-higashi",
+          "name": "079（仮)",
+          "coordinates": [
+            36.394742,
+            140.17041
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-higashi-w014",
+          "areaId": "ik-higashi",
+          "name": "080（仮)",
+          "coordinates": [
+            36.394867,
+            140.170231
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-higashi-w015",
+          "areaId": "ik-higashi",
+          "name": "081（仮)",
+          "coordinates": [
+            36.394992,
+            140.170356
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-higashi-w016",
+          "areaId": "ik-higashi",
+          "name": "107（仮）",
+          "coordinates": [
+            36.394256,
+            140.170428
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        }
+      ]
+    },
+    {
+      "id": "ik-mori",
+      "slug": "ik-mori",
+      "name": "森エリア（仮）",
+      "polygon": [
+        [
+          36.379558,
+          140.159725
+        ],
+        [
+          36.379558,
+          140.17045
+        ],
+        [
+          36.395535,
+          140.17045
+        ],
+        [
+          36.395535,
+          140.159725
+        ]
+      ],
+      "visibility": "public",
+      "status": "published",
+      "walls": [
+        {
+          "id": "ik-mori-w001",
+          "areaId": "ik-mori",
+          "name": "007～008（仮）",
+          "coordinates": [
+            36.381316,
+            140.160898
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-mori-w002",
+          "areaId": "ik-mori",
+          "name": "やすり岩",
+          "coordinates": [
+            36.393601,
+            140.168975
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-mori-w003",
+          "areaId": "ik-mori",
+          "name": "柚子岩",
+          "coordinates": [
+            36.393588,
+            140.168939
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-mori-w004",
+          "areaId": "ik-mori",
+          "name": "004（仮）",
+          "coordinates": [
+            36.393338,
+            140.168779
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-mori-w005",
+          "areaId": "ik-mori",
+          "name": "せせらぎ右岩",
+          "coordinates": [
+            36.393667,
+            140.168428
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-mori-w006",
+          "areaId": "ik-mori",
+          "name": "せせらぎ左岩",
+          "coordinates": [
+            36.393695,
+            140.168393
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-mori-w007",
+          "areaId": "ik-mori",
+          "name": "イノシシ岩",
+          "coordinates": [
+            36.393877,
+            140.168175
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-mori-w008",
+          "areaId": "ik-mori",
+          "name": "甲羅岩",
+          "coordinates": [
+            36.393787,
+            140.168656
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-mori-w009",
+          "areaId": "ik-mori",
+          "name": "頭岩",
+          "coordinates": [
+            36.393828,
+            140.168725
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-mori-w010",
+          "areaId": "ik-mori",
+          "name": "せせらぎ下岩",
+          "coordinates": [
+            36.393584,
+            140.168392
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-mori-w011",
+          "areaId": "ik-mori",
+          "name": "097",
+          "coordinates": [
+            36.393051,
+            140.169277
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-mori-w012",
+          "areaId": "ik-mori",
+          "name": "108（仮）",
+          "coordinates": [
+            36.39371,
+            140.169216
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        }
+      ]
+    },
+    {
+      "id": "ik-tani-ue",
+      "slug": "ik-tani-ue",
+      "name": "谷広場上（仮）",
+      "polygon": [
+        [
+          36.355892,
+          140.140698
+        ],
+        [
+          36.355892,
+          140.172521
+        ],
+        [
+          36.402069,
+          140.172521
+        ],
+        [
+          36.402069,
+          140.140698
+        ]
+      ],
+      "visibility": "public",
+      "status": "published",
+      "walls": [
+        {
+          "id": "ik-tani-ue-w001",
+          "areaId": "ik-tani-ue",
+          "name": "048（仮）",
+          "coordinates": [
+            36.396273,
+            140.16829
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-tani-ue-w002",
+          "areaId": "ik-tani-ue",
+          "name": "048周辺（仮）",
+          "coordinates": [
+            36.360942,
+            140.144178
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-tani-ue-w003",
+          "areaId": "ik-tani-ue",
+          "name": "060（仮）",
+          "coordinates": [
+            36.396583,
+            140.168467
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-tani-ue-w004",
+          "areaId": "ik-tani-ue",
+          "name": "062（仮）",
+          "coordinates": [
+            36.397019,
+            140.16837
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-tani-ue-w005",
+          "areaId": "ik-tani-ue",
+          "name": "063（仮）",
+          "coordinates": [
+            36.396756,
+            140.169041
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-tani-ue-w006",
+          "areaId": "ik-tani-ue",
+          "name": "064（仮）",
+          "coordinates": [
+            36.396618,
+            140.16896
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        }
+      ]
+    },
+    {
+      "id": "ik-nishi",
+      "slug": "ik-nishi",
+      "name": "西エリア（仮）",
+      "polygon": [
+        [
+          36.355958,
+          140.140871
+        ],
+        [
+          36.355958,
+          140.171107
+        ],
+        [
+          36.401525,
+          140.171107
+        ],
+        [
+          36.401525,
+          140.140871
+        ]
+      ],
+      "visibility": "public",
+      "status": "published",
+      "walls": [
+        {
+          "id": "ik-nishi-w001",
+          "areaId": "ik-nishi",
+          "name": "044（仮）",
+          "coordinates": [
+            36.395966,
+            140.167337
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-nishi-w002",
+          "areaId": "ik-nishi",
+          "name": "045（仮）",
+          "coordinates": [
+            36.396063,
+            140.167303
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-nishi-w003",
+          "areaId": "ik-nishi",
+          "name": "046（仮）",
+          "coordinates": [
+            36.396149,
+            140.167245
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-nishi-w004",
+          "areaId": "ik-nishi",
+          "name": "041（仮）",
+          "coordinates": [
+            36.395537,
+            140.167533
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-nishi-w005",
+          "areaId": "ik-nishi",
+          "name": "049（仮）",
+          "coordinates": [
+            36.396541,
+            140.167327
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-nishi-w006",
+          "areaId": "ik-nishi",
+          "name": "043（仮）",
+          "coordinates": [
+            36.395774,
+            140.167349
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-nishi-w007",
+          "areaId": "ik-nishi",
+          "name": "044周辺2（仮）",
+          "coordinates": [
+            36.360942,
+            140.144178
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-nishi-w008",
+          "areaId": "ik-nishi",
+          "name": "044周辺1（仮）",
+          "coordinates": [
+            36.360942,
+            140.144178
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-nishi-w009",
+          "areaId": "ik-nishi",
+          "name": "050（仮）",
+          "coordinates": [
+            36.39654,
+            140.167364
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-nishi-w010",
+          "areaId": "ik-nishi",
+          "name": "047（仮）",
+          "coordinates": [
+            36.396315,
+            140.167112
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-nishi-w011",
+          "areaId": "ik-nishi",
+          "name": "042（仮）",
+          "coordinates": [
+            36.395735,
+            140.167266
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-nishi-w012",
+          "areaId": "ik-nishi",
+          "name": "058（仮）",
+          "coordinates": [
+            36.395248,
+            140.167471
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-nishi-w013",
+          "areaId": "ik-nishi",
+          "name": "068（仮)",
+          "coordinates": [
+            36.396407,
+            140.1678
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-nishi-w014",
+          "areaId": "ik-nishi",
+          "name": "072（仮)",
+          "coordinates": [
+            36.395025,
+            140.167238
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        }
+      ]
+    },
+    {
+      "id": "ik-tani",
+      "slug": "ik-tani",
+      "name": "谷広場（仮）",
+      "polygon": [
+        [
+          36.394987,
+          140.167813
+        ],
+        [
+          36.394987,
+          140.169764
+        ],
+        [
+          36.396406,
+          140.169764
+        ],
+        [
+          36.396406,
+          140.167813
+        ]
+      ],
+      "visibility": "public",
+      "status": "published",
+      "walls": [
+        {
+          "id": "ik-tani-w001",
+          "areaId": "ik-tani",
+          "name": "040（仮）",
+          "coordinates": [
+            36.395905,
+            140.168686
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-tani-w002",
+          "areaId": "ik-tani",
+          "name": "033（仮）",
+          "coordinates": [
+            36.395337,
+            140.169123
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-tani-w003",
+          "areaId": "ik-tani",
+          "name": "038（仮）",
+          "coordinates": [
+            36.395906,
+            140.168764
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-tani-w004",
+          "areaId": "ik-tani",
+          "name": "039（仮）",
+          "coordinates": [
+            36.395906,
+            140.168764
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-tani-w005",
+          "areaId": "ik-tani",
+          "name": "矢穴岩",
+          "coordinates": [
+            36.395413,
+            140.16898
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-tani-w006",
+          "areaId": "ik-tani",
+          "name": "033周辺2（仮）",
+          "coordinates": [
+            36.395413,
+            140.16898
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-tani-w007",
+          "areaId": "ik-tani",
+          "name": "妥当岩",
+          "coordinates": [
+            36.395413,
+            140.16898
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-tani-w008",
+          "areaId": "ik-tani",
+          "name": "065（仮）",
+          "coordinates": [
+            36.396056,
+            140.169261
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-tani-w009",
+          "areaId": "ik-tani",
+          "name": "066（仮）",
+          "coordinates": [
+            36.395961,
+            140.169314
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-tani-w010",
+          "areaId": "ik-tani",
+          "name": "067（仮)",
+          "coordinates": [
+            36.395577,
+            140.168263
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-tani-w011",
+          "areaId": "ik-tani",
+          "name": "071（仮)",
+          "coordinates": [
+            36.395612,
+            140.168633
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        }
+      ]
+    },
+    {
+      "id": "ik-hokusei",
+      "slug": "ik-hokusei",
+      "name": "北西エリア（仮）",
+      "polygon": [
+        [
+          36.396669,
+          140.16694
+        ],
+        [
+          36.396669,
+          140.16882
+        ],
+        [
+          36.398195,
+          140.16882
+        ],
+        [
+          36.398195,
+          140.16694
+        ]
+      ],
+      "visibility": "public",
+      "status": "published",
+      "walls": [
+        {
+          "id": "ik-hokusei-w001",
+          "areaId": "ik-hokusei",
+          "name": "054（仮）",
+          "coordinates": [
+            36.397382,
+            140.168115
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-hokusei-w002",
+          "areaId": "ik-hokusei",
+          "name": "051（仮）",
+          "coordinates": [
+            36.397073,
+            140.16739
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-hokusei-w003",
+          "areaId": "ik-hokusei",
+          "name": "052（仮）",
+          "coordinates": [
+            36.397066,
+            140.167876
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-hokusei-w004",
+          "areaId": "ik-hokusei",
+          "name": "053（仮）",
+          "coordinates": [
+            36.397189,
+            140.167831
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-hokusei-w005",
+          "areaId": "ik-hokusei",
+          "name": "061（仮）",
+          "coordinates": [
+            36.397019,
+            140.16837
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-hokusei-w006",
+          "areaId": "ik-hokusei",
+          "name": "069（仮)",
+          "coordinates": [
+            36.397845,
+            140.168236
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        }
+      ]
+    },
+    {
+      "id": "ik-misc",
+      "slug": "ik-misc",
+      "name": "その他",
+      "polygon": [
+        [
+          36.397342,
+          140.166861
+        ],
+        [
+          36.397342,
+          140.171335
+        ],
+        [
+          36.398166,
+          140.171335
+        ],
+        [
+          36.398166,
+          140.166861
+        ]
+      ],
+      "visibility": "public",
+      "status": "published",
+      "walls": [
+        {
+          "id": "ik-misc-w001",
+          "areaId": "ik-misc",
+          "name": "055（仮）",
+          "coordinates": [
+            36.397692,
+            140.170846
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-misc-w002",
+          "areaId": "ik-misc",
+          "name": "056（仮）",
+          "coordinates": [
+            36.397772,
+            140.16735
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-misc-w003",
+          "areaId": "ik-misc",
+          "name": "070（仮)",
+          "coordinates": [
+            36.397816,
+            140.169626
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        }
+      ]
+    },
+    {
+      "id": "ik-nishi-kyu",
+      "slug": "ik-nishi-kyu",
+      "name": "西急登（仮）",
+      "polygon": [
+        [
+          36.393946,
+          140.165615
+        ],
+        [
+          36.393946,
+          140.168127
+        ],
+        [
+          36.394819,
+          140.168127
+        ],
+        [
+          36.394819,
+          140.165615
+        ]
+      ],
+      "visibility": "public",
+      "status": "published",
+      "walls": [
+        {
+          "id": "ik-nishi-kyu-w001",
+          "areaId": "ik-nishi-kyu",
+          "name": "008（仮）",
+          "coordinates": [
+            36.393703,
+            140.167677
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-nishi-kyu-w002",
+          "areaId": "ik-nishi-kyu",
+          "name": "073（仮)",
+          "coordinates": [
+            36.394469,
+            140.167022
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-nishi-kyu-w003",
+          "areaId": "ik-nishi-kyu",
+          "name": "074（仮)",
+          "coordinates": [
+            36.394296,
+            140.166888
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-nishi-kyu-w004",
+          "areaId": "ik-nishi-kyu",
+          "name": "075（仮)",
+          "coordinates": [
+            36.394451,
+            140.166065
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        }
+      ]
+    },
+    {
+      "id": "ik-ishigaki",
+      "slug": "ik-ishigaki",
+      "name": "石垣エリア",
+      "polygon": [
+        [
+          36.393707,
+          140.17017
+        ],
+        [
+          36.393707,
+          140.171654
+        ],
+        [
+          36.395635,
+          140.171654
+        ],
+        [
+          36.395635,
+          140.17017
+        ]
+      ],
+      "visibility": "public",
+      "status": "published",
+      "walls": [
+        {
+          "id": "ik-ishigaki-w001",
+          "areaId": "ik-ishigaki",
+          "name": "076（仮)",
+          "coordinates": [
+            36.394341,
+            140.170652
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-ishigaki-w002",
+          "areaId": "ik-ishigaki",
+          "name": "077（仮)",
+          "coordinates": [
+            36.394341,
+            140.170652
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-ishigaki-w003",
+          "areaId": "ik-ishigaki",
+          "name": "078（仮)",
+          "coordinates": [
+            36.394361,
+            140.17062
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-ishigaki-w004",
+          "areaId": "ik-ishigaki",
+          "name": "082（仮)",
+          "coordinates": [
+            36.395135,
+            140.170789
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-ishigaki-w005",
+          "areaId": "ik-ishigaki",
+          "name": "083（仮)",
+          "coordinates": [
+            36.395285,
+            140.17098
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-ishigaki-w006",
+          "areaId": "ik-ishigaki",
+          "name": "084（仮)",
+          "coordinates": [
+            36.395208,
+            140.170958
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-ishigaki-w007",
+          "areaId": "ik-ishigaki",
+          "name": "085（仮)",
+          "coordinates": [
+            36.394844,
+            140.171204
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-ishigaki-w008",
+          "areaId": "ik-ishigaki",
+          "name": "086（仮)",
+          "coordinates": [
+            36.394801,
+            140.171154
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-ishigaki-w009",
+          "areaId": "ik-ishigaki",
+          "name": "087（仮)",
+          "coordinates": [
+            36.394801,
+            140.171154
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-ishigaki-w010",
+          "areaId": "ik-ishigaki",
+          "name": "088（仮)",
+          "coordinates": [
+            36.39472,
+            140.170837
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-ishigaki-w011",
+          "areaId": "ik-ishigaki",
+          "name": "089（仮)",
+          "coordinates": [
+            36.394523,
+            140.170788
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-ishigaki-w012",
+          "areaId": "ik-ishigaki",
+          "name": "090（仮)",
+          "coordinates": [
+            36.394335,
+            140.170859
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        },
+        {
+          "id": "ik-ishigaki-w013",
+          "areaId": "ik-ishigaki",
+          "name": "091（仮)",
+          "coordinates": [
+            36.394057,
+            140.170992
+          ],
+          "visibility": "public",
+          "status": "published",
+          "routes": []
+        }
+      ]
+    }
+  ]
+}
