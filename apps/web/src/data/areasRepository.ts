@@ -8,16 +8,19 @@ export async function loadAreasData(url = '/data/areas.seed.json'): Promise<Area
   if (cache) return cache
   if (!inflight) {
     inflight = (async () => {
-      const res = await fetch(url)
-      if (!res.ok) {
-        throw new Error(`エリアデータを読み込めませんでした (${res.status})`)
+      try {
+        const res = await fetch(url)
+        if (!res.ok) {
+          throw new Error(`エリアデータを読み込めませんでした (${res.status})`)
+        }
+        const raw = (await res.json()) as AreasData
+        const areas = filterAreasData(raw.areas)
+        const data: AreasData = { areas }
+        cache = data
+        return data
+      } finally {
+        inflight = null
       }
-      const raw = (await res.json()) as AreasData
-      const areas = filterAreasData(raw.areas)
-      const data: AreasData = { areas }
-      cache = data
-      inflight = null
-      return data
     })()
   }
   return inflight
