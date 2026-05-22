@@ -51,6 +51,12 @@ export function WallDetailPage() {
         <h1 className="wall-detail__title">{wall.name}</h1>
       </header>
 
+      {wall.outOfBounds ? (
+        <p className="wall-detail__notice">
+          この岩の位置情報は未確定です（地図上には表示されません）。
+        </p>
+      ) : null}
+
       {wall.imageUrl ? (
         <RouteTopo
           imageUrl={wall.imageUrl}

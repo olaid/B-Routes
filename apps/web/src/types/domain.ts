@@ -20,6 +20,8 @@ export interface Wall {
   areaId: string
   name: string
   coordinates: LatLng
+  /** 元データの座標がエリア中心から大きく外れた値の場合に true。エリア地図でマーカー表示しない */
+  outOfBounds?: boolean
   imageUrl?: string
   imageWidth?: number
   imageHeight?: number

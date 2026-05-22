@@ -61,6 +61,7 @@ export function AreaMapPage() {
   }
 
   const center = bounds.getCenter()
+  const unlocatedWalls = area.walls.filter((w) => w.outOfBounds)
 
   return (
     <div className="map-page map-page--stack">
@@ -94,18 +95,20 @@ export function AreaMapPage() {
               fillOpacity: 0.12
             }}
           />
-          {area.walls.map((w) => (
-            <Marker key={w.id} position={toLeafletLatLng(w.coordinates)}>
-              <Popup>
-                <strong>{w.name}</strong>
-                <div>
-                  <button type="button" onClick={() => navigate(`/walls/${w.id}`)}>
-                    詳細へ
-                  </button>
-                </div>
-              </Popup>
-            </Marker>
-          ))}
+          {area.walls
+            .filter((w) => !w.outOfBounds)
+            .map((w) => (
+              <Marker key={w.id} position={toLeafletLatLng(w.coordinates)}>
+                <Popup>
+                  <strong>{w.name}</strong>
+                  <div>
+                    <button type="button" onClick={() => navigate(`/walls/${w.id}`)}>
+                      詳細へ
+                    </button>
+                  </div>
+                </Popup>
+              </Marker>
+            ))}
         </MapContainer>
 
         {bearingOverlay ? (
@@ -114,6 +117,19 @@ export function AreaMapPage() {
           </div>
         ) : null}
       </div>
+
+      {unlocatedWalls.length > 0 ? (
+        <section className="unlocated-walls">
+          <h2 className="unlocated-walls__title">位置未確定の岩</h2>
+          <ul className="unlocated-walls__list">
+            {unlocatedWalls.map((w) => (
+              <li key={w.id}>
+                <Link to={`/walls/${w.id}`}>{w.name}</Link>
+              </li>
+            ))}
+          </ul>
+        </section>
+      ) : null}
     </div>
   )
 }

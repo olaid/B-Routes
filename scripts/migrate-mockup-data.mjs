@@ -6,9 +6,13 @@
 import { readFile, writeFile, mkdir } from 'node:fs/promises'
 import { dirname, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
+import { buildAreaPolygon } from './lib/areaPolygon.mjs'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const repoRoot = resolve(__dirname, '..')
+
+const OUTLIER_METERS = 500
+const PAD_METERS = 25
 
 const SRC = resolve(repoRoot, 'archive/mockup-b-routes/public/data/areas.json')
 const DEST_SUPABASE = resolve(repoRoot, 'supabase/seed/areas.seed.json')
@@ -33,6 +37,7 @@ function mapWall(rawWall, areaId) {
     areaId,
     name: String(rawWall.name ?? rawWall.id),
     coordinates: [lat, lng],
+    outOfBounds: rawWall.outOfBounds ?? false,
     imageUrl: rawWall.imageUrl ?? undefined,
     imageWidth: rawWall.imageWidth ?? undefined,
     imageHeight: rawWall.imageHeight ?? undefined,
@@ -64,22 +69,50 @@ function mapRoute(rawRoute, wallId) {
   }
 }
 
-function mapArea(rawArea) {
-  if (!Array.isArray(rawArea.polygon) || rawArea.polygon.length < 3) {
-    throw new Error(`area ${rawArea.id} has invalid polygon`)
-  }
+function mapArea(rawArea, { warnings }) {
   const id = String(rawArea.id)
   const slug = rawArea.slug ?? toSlug(id)
+  const walls = Array.isArray(rawArea.walls) ? rawArea.walls.map((w) => mapWall(w, id)) : []
+
+  // ポリゴンは岩の座標から再生成する（元 polygon は無視）。
+  // 中央値中心から OUTLIER_METERS を超える岩座標は外れ値としてポリゴン計算から除外する。
+  const wallCoords = walls.map((w) => w.coordinates)
+  const { polygon, inlierCount, outliers } = buildAreaPolygon(wallCoords, {
+    outlierMeters: OUTLIER_METERS,
+    padMeters: PAD_METERS
+  })
+
+  // 外れ値の岩は outOfBounds:true を付与（地図マーカーから除外し、詳細ページで案内する）。
+  const outlierWalls = walls.filter((w) =>
+    outliers.some((o) => o[0] === w.coordinates[0] && o[1] === w.coordinates[1])
+  )
+  for (const w of outlierWalls) {
+    w.outOfBounds = true
+  }
+
+  if (outliers.length > 0) {
+    warnings.push({
+      areaId: id,
+      areaName: rawArea.name ?? id,
+      inlierCount,
+      outlierWalls: outlierWalls.map((w) => ({ id: w.id, name: w.name, coords: w.coordinates }))
+    })
+  }
+
+  if (polygon.length < 3) {
+    throw new Error(`area ${id} produced an invalid polygon (length=${polygon.length})`)
+  }
+
   return {
     id,
     slug,
     name: String(rawArea.name ?? id),
-    polygon: rawArea.polygon.map(([lat, lng]) => [lat, lng]),
+    polygon: polygon.map(([lat, lng]) => [lat, lng]),
     description: rawArea.description ?? undefined,
     accessNotes: rawArea.accessNotes ?? undefined,
     visibility: rawArea.visibility ?? 'public',
     status: rawArea.status ?? 'published',
-    walls: Array.isArray(rawArea.walls) ? rawArea.walls.map((w) => mapWall(w, id)) : []
+    walls
   }
 }
 
@@ -89,7 +122,8 @@ async function main() {
     throw new Error('source areas.json must have an `areas` array')
   }
 
-  const areas = raw.areas.map(mapArea)
+  const warnings = []
+  const areas = raw.areas.map((a) => mapArea(a, { warnings }))
   const out = { areas }
   const json = JSON.stringify(out, null, 2) + '\n'
 
@@ -108,6 +142,19 @@ async function main() {
   )
   console.log(`-> ${DEST_SUPABASE}`)
   console.log(`-> ${DEST_WEB}`)
+
+  if (warnings.length > 0) {
+    console.log(
+      `\nNote: ${warnings.length} area(s) have wall coordinates further than ${OUTLIER_METERS} m`
+    )
+    console.log(`(これらの座標はポリゴン計算から除外しました。岩マーカーは保持されます)`)
+    for (const w of warnings) {
+      console.log(`  [${w.areaId}] ${w.areaName} (${w.inlierCount} inliers)`)
+      for (const ow of w.outlierWalls) {
+        console.log(`    - ${ow.id} ${ow.name} [${ow.coords[0]}, ${ow.coords[1]}]`)
+      }
+    }
+  }
 }
 
 main().catch((err) => {

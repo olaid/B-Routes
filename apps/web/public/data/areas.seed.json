@@ -6,20 +6,24 @@
       "name": "崩落地周辺（仮）",
       "polygon": [
         [
-          36.394008,
-          140.168023
+          36.394622270022715,
+          140.16790198113017
         ],
         [
-          36.394008,
-          140.169478
+          36.3941650616203,
+          140.16904878754093
         ],
         [
-          36.395402,
-          140.169478
+          36.39441067622648,
+          140.16926740314807
         ],
         [
-          36.395402,
-          140.168023
+          36.395276567823224,
+          140.16863823892024
+        ],
+        [
+          36.39515751997333,
+          140.16833796113568
         ]
       ],
       "visibility": "public",
@@ -33,6 +37,7 @@
             36.394526,
             140.169028
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -45,6 +50,7 @@
             36.394655,
             140.168178
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -57,6 +63,7 @@
             36.394358,
             140.168906
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -69,6 +76,7 @@
             36.394894,
             140.168534
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -81,6 +89,7 @@
             36.394884,
             140.168541
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -93,6 +102,7 @@
             36.39492,
             140.168536
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -105,6 +115,7 @@
             36.394711,
             140.168601
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -117,6 +128,7 @@
             36.394717,
             140.168599
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -129,6 +141,7 @@
             36.394961,
             140.168473
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -141,6 +154,7 @@
             36.394895,
             140.168534
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -153,6 +167,7 @@
             36.395052,
             140.168641
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -165,6 +180,7 @@
             36.394441,
             140.168736
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -177,6 +193,7 @@
             36.394441,
             140.168736
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -189,20 +206,24 @@
       "name": "ハイキング道周辺",
       "polygon": [
         [
-          36.391606,
-          140.169216
+          36.39252233268387,
+          140.16942991559114
         ],
         [
-          36.391606,
-          140.171235
+          36.39173143011891,
+          140.16999748933594
         ],
         [
-          36.393839,
-          140.171235
+          36.393652683026644,
+          140.17097601928685
         ],
         [
-          36.393839,
-          140.169216
+          36.393132702087,
+          140.1695505862666
+        ],
+        [
+          36.393085627215974,
+          140.16950195219442
         ]
       ],
       "visibility": "public",
@@ -216,6 +237,7 @@
             36.392642,
             140.169666
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -228,6 +250,7 @@
             36.392642,
             140.169666
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -240,6 +263,7 @@
             36.392979,
             140.169754
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -252,6 +276,7 @@
             36.392954,
             140.169728
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -264,6 +289,7 @@
             36.393252,
             140.170628
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -276,6 +302,7 @@
             36.393489,
             140.170785
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -288,6 +315,7 @@
             36.391956,
             140.169995
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -300,20 +328,24 @@
       "name": "ハイキング道周辺上",
       "polygon": [
         [
-          36.393344,
-          140.171085
+          36.39349575694152,
+          140.17140390609813
         ],
         [
-          36.393344,
-          140.172819
+          36.39415487628482,
+          140.17238138020926
         ],
         [
-          36.395586,
-          140.172819
+          36.39463401010959,
+          140.17263980858465
         ],
         [
-          36.395586,
-          140.171085
+          36.3949270969909,
+          140.17254613621805
+        ],
+        [
+          36.395457123493046,
+          140.17187724738696
         ]
       ],
       "visibility": "public",
@@ -327,6 +359,7 @@
             36.393694,
             140.171535
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -339,6 +372,7 @@
             36.393955,
             140.171769
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -351,6 +385,7 @@
             36.394343,
             140.172229
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -363,6 +398,7 @@
             36.394538,
             140.172325
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -375,6 +411,7 @@
             36.39458,
             140.172369
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -387,6 +424,7 @@
             36.394762,
             140.172357
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -399,6 +437,7 @@
             36.395236,
             140.171926
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -411,20 +450,24 @@
       "name": "東尾根（仮）",
       "polygon": [
         [
-          36.378922,
-          140.161429
+          36.39397922809401,
+          140.16772198086863
         ],
         [
-          36.378922,
-          140.171274
+          36.39338479259085,
+          140.17041593124
         ],
         [
-          36.396219,
-          140.171274
+          36.39438685159758,
+          140.16986990792756
         ],
         [
-          36.396219,
-          140.161429
+          36.39454206683723,
+          140.1694823369467
+        ],
+        [
+          36.39454639622,
+          140.16933524840866
         ]
       ],
       "visibility": "public",
@@ -438,6 +481,7 @@
             36.394262,
             140.169638
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -450,6 +494,7 @@
             36.393937,
             140.169588
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -462,6 +507,7 @@
             36.393896,
             140.169782
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -474,6 +520,7 @@
             36.393808,
             140.169908
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -486,6 +533,7 @@
             36.393995,
             140.169487
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -498,6 +546,7 @@
             36.393998,
             140.168
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -510,6 +559,7 @@
             36.380814,
             140.162506
           ],
+          "outOfBounds": true,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -522,6 +572,7 @@
             36.393524,
             140.170197
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -534,6 +585,7 @@
             36.394327,
             140.169402
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -546,6 +598,7 @@
             36.394322,
             140.169324
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -558,20 +611,24 @@
       "name": "東エリア（仮）",
       "polygon": [
         [
-          36.393906,
-          140.169216
+          36.39500360013495,
+          140.16943709773363
         ],
         [
-          36.393906,
-          140.171048
+          36.39403470833984,
+          140.17047556096546
         ],
         [
-          36.396576,
-          140.171048
+          36.395496794938865,
+          140.17087436483607
         ],
         [
-          36.396576,
-          140.169216
+          36.39622600209565,
+          140.17055787833257
+        ],
+        [
+          36.39643171260771,
+          140.16962706664006
         ]
       ],
       "visibility": "public",
@@ -585,6 +642,7 @@
             36.395059,
             140.169825
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -597,6 +655,7 @@
             36.395198,
             140.170161
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -609,6 +668,7 @@
             36.3952,
             140.170417
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -621,6 +681,7 @@
             36.394881,
             140.170009
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -633,6 +694,7 @@
             36.394884,
             140.170024
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -645,6 +707,7 @@
             36.395059,
             140.169825
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -657,6 +720,7 @@
             36.395466,
             140.170598
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -669,6 +733,7 @@
             36.394882,
             140.17002
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -681,6 +746,7 @@
             36.394951,
             140.170007
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -693,6 +759,7 @@
             36.395132,
             140.169666
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -705,6 +772,7 @@
             36.396016,
             140.170459
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -717,6 +785,7 @@
             36.396226,
             140.169739
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -729,6 +798,7 @@
             36.394742,
             140.17041
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -741,6 +811,7 @@
             36.394867,
             140.170231
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -753,6 +824,7 @@
             36.394992,
             140.170356
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -765,6 +837,7 @@
             36.394256,
             140.170428
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -777,20 +850,28 @@
       "name": "森エリア（仮）",
       "polygon": [
         [
-          36.379558,
-          140.159725
+          36.39400103480797,
+          140.16794241818826
         ],
         [
-          36.379558,
-          140.17045
+          36.3935985998185,
+          140.16811359656435
         ],
         [
-          36.395535,
-          140.17045
+          36.39311389565841,
+          140.16879712608647
         ],
         [
-          36.395535,
-          140.159725
+          36.39287641444242,
+          140.169452491907
+        ],
+        [
+          36.39379277917303,
+          140.16947534942744
+        ],
+        [
+          36.3940512558497,
+          140.16869476154946
         ]
       ],
       "visibility": "public",
@@ -804,6 +885,7 @@
             36.381316,
             140.160898
           ],
+          "outOfBounds": true,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -816,6 +898,7 @@
             36.393601,
             140.168975
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -828,6 +911,7 @@
             36.393588,
             140.168939
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -840,6 +924,7 @@
             36.393338,
             140.168779
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -852,6 +937,7 @@
             36.393667,
             140.168428
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -864,6 +950,7 @@
             36.393695,
             140.168393
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -876,6 +963,7 @@
             36.393877,
             140.168175
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -888,6 +976,7 @@
             36.393787,
             140.168656
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -900,6 +989,7 @@
             36.393828,
             140.168725
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -912,6 +1002,7 @@
             36.393584,
             140.168392
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -924,6 +1015,7 @@
             36.393051,
             140.169277
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -936,6 +1028,7 @@
             36.39371,
             140.169216
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -948,20 +1041,20 @@
       "name": "谷広場上（仮）",
       "polygon": [
         [
-          36.355892,
-          140.140698
+          36.39609485286154,
+          140.16812011508588
         ],
         [
-          36.355892,
-          140.172521
+          36.39657302101598,
+          140.16923335166052
         ],
         [
-          36.402069,
-          140.172521
+          36.39681972471448,
+          140.16930853699958
         ],
         [
-          36.402069,
-          140.140698
+          36.397205211010586,
+          140.1682140317706
         ]
       ],
       "visibility": "public",
@@ -975,6 +1068,7 @@
             36.396273,
             140.16829
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -987,6 +1081,7 @@
             36.360942,
             140.144178
           ],
+          "outOfBounds": true,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -999,6 +1094,7 @@
             36.396583,
             140.168467
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -1011,6 +1107,7 @@
             36.397019,
             140.16837
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -1023,6 +1120,7 @@
             36.396756,
             140.169041
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -1035,6 +1133,7 @@
             36.396618,
             140.16896
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -1047,20 +1146,28 @@
       "name": "西エリア（仮）",
       "polygon": [
         [
-          36.355958,
-          140.140871
+          36.39649658590374,
+          140.16694783192827
         ],
         [
-          36.355958,
-          140.171107
+          36.39480202286096,
+          140.16720473780106
         ],
         [
-          36.401525,
-          140.171107
+          36.395024328792545,
+          140.16749605819544
         ],
         [
-          36.401525,
-          140.140871
+          36.39657841614962,
+          140.16798025502123
+        ],
+        [
+          36.39676445984423,
+          140.16735491945005
+        ],
+        [
+          36.396764697133534,
+          140.16730230157833
         ]
       ],
       "visibility": "public",
@@ -1074,6 +1181,7 @@
             36.395966,
             140.167337
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -1086,6 +1194,7 @@
             36.396063,
             140.167303
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -1098,6 +1207,7 @@
             36.396149,
             140.167245
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -1110,6 +1220,7 @@
             36.395537,
             140.167533
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -1122,6 +1233,7 @@
             36.396541,
             140.167327
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -1134,6 +1246,7 @@
             36.395774,
             140.167349
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -1146,6 +1259,7 @@
             36.360942,
             140.144178
           ],
+          "outOfBounds": true,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -1158,6 +1272,7 @@
             36.360942,
             140.144178
           ],
+          "outOfBounds": true,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -1170,6 +1285,7 @@
             36.39654,
             140.167364
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -1182,6 +1298,7 @@
             36.396315,
             140.167112
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -1194,6 +1311,7 @@
             36.395735,
             140.167266
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -1206,6 +1324,7 @@
             36.395248,
             140.167471
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -1218,6 +1337,7 @@
             36.396407,
             140.1678
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -1230,6 +1350,7 @@
             36.395025,
             140.167238
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -1242,20 +1363,24 @@
       "name": "谷広場（仮）",
       "polygon": [
         [
-          36.394987,
-          140.167813
+          36.39550194741461,
+          140.16800003973233
         ],
         [
-          36.394987,
-          140.169764
+          36.39512584781046,
+          140.16921802339354
         ],
         [
-          36.396406,
-          140.169764
+          36.39608016495471,
+          140.1695504852507
         ],
         [
-          36.396406,
-          140.167813
+          36.396220926563295,
+          140.1694503685886
+        ],
+        [
+          36.39603419916145,
+          140.16845779190206
         ]
       ],
       "visibility": "public",
@@ -1269,6 +1394,7 @@
             36.395905,
             140.168686
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -1281,6 +1407,7 @@
             36.395337,
             140.169123
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -1293,6 +1420,7 @@
             36.395906,
             140.168764
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -1305,6 +1433,7 @@
             36.395906,
             140.168764
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -1317,6 +1446,7 @@
             36.395413,
             140.16898
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -1329,6 +1459,7 @@
             36.395413,
             140.16898
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -1341,6 +1472,7 @@
             36.395413,
             140.16898
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -1353,6 +1485,7 @@
             36.396056,
             140.169261
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -1365,6 +1498,7 @@
             36.395961,
             140.169314
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -1377,6 +1511,7 @@
             36.395577,
             140.168263
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -1389,6 +1524,7 @@
             36.395612,
             140.168633
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -1401,20 +1537,16 @@
       "name": "北西エリア（仮）",
       "polygon": [
         [
-          36.396669,
-          140.16694
+          36.39697442503829,
+          140.16713930657372
         ],
         [
-          36.396669,
-          140.16882
+          36.396861696839096,
+          140.16856913150144
         ],
         [
-          36.398195,
-          140.16882
-        ],
-        [
-          36.398195,
-          140.16694
+          36.398056394962616,
+          140.168330188494
         ]
       ],
       "visibility": "public",
@@ -1428,6 +1560,7 @@
             36.397382,
             140.168115
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -1440,6 +1573,7 @@
             36.397073,
             140.16739
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -1452,6 +1586,7 @@
             36.397066,
             140.167876
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -1464,6 +1599,7 @@
             36.397189,
             140.167831
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -1476,6 +1612,7 @@
             36.397019,
             140.16837
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -1488,6 +1625,7 @@
             36.397845,
             140.168236
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -1500,20 +1638,16 @@
       "name": "その他",
       "polygon": [
         [
-          36.397342,
-          140.166861
+          36.39777374012658,
+          140.16707099970523
         ],
         [
-          36.397342,
-          140.171335
+          36.397679948313275,
+          140.17112460664012
         ],
         [
-          36.398166,
-          140.171335
-        ],
-        [
-          36.398166,
-          140.166861
+          36.39785954534058,
+          140.1698997135694
         ]
       ],
       "visibility": "public",
@@ -1527,6 +1661,7 @@
             36.397692,
             140.170846
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -1539,6 +1674,7 @@
             36.397772,
             140.16735
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -1551,6 +1687,7 @@
             36.397816,
             140.169626
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -1563,20 +1700,16 @@
       "name": "西急登（仮）",
       "polygon": [
         [
-          36.393946,
-          140.165615
+          36.394525757432476,
+          140.16580191528215
         ],
         [
-          36.393946,
-          140.168127
+          36.393559602534836,
+          140.1678917173405
         ],
         [
-          36.394819,
-          140.168127
-        ],
-        [
-          36.394819,
-          140.165615
+          36.39468350376912,
+          140.16710462772738
         ]
       ],
       "visibility": "public",
@@ -1590,6 +1723,7 @@
             36.393703,
             140.167677
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -1602,6 +1736,7 @@
             36.394469,
             140.167022
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -1614,6 +1749,7 @@
             36.394296,
             140.166888
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -1626,6 +1762,7 @@
             36.394451,
             140.166065
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -1638,20 +1775,24 @@
       "name": "石垣エリア",
       "polygon": [
         [
-          36.393707,
-          140.17017
+          36.39417157236029,
+          140.17047013316733
         ],
         [
-          36.393707,
-          140.171654
+          36.39383330260038,
+          140.1710166942964
         ],
         [
-          36.395635,
-          140.171654
+          36.394938819556984,
+          140.17145691090013
         ],
         [
-          36.395635,
-          140.17017
+          36.39550862542821,
+          140.1710056806452
+        ],
+        [
+          36.39535243227518,
+          140.17071917729248
         ]
       ],
       "visibility": "public",
@@ -1665,6 +1806,7 @@
             36.394341,
             140.170652
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -1677,6 +1819,7 @@
             36.394341,
             140.170652
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -1689,6 +1832,7 @@
             36.394361,
             140.17062
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -1701,6 +1845,7 @@
             36.395135,
             140.170789
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -1713,6 +1858,7 @@
             36.395285,
             140.17098
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -1725,6 +1871,7 @@
             36.395208,
             140.170958
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -1737,6 +1884,7 @@
             36.394844,
             140.171204
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -1749,6 +1897,7 @@
             36.394801,
             140.171154
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -1761,6 +1910,7 @@
             36.394801,
             140.171154
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -1773,6 +1923,7 @@
             36.39472,
             140.170837
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -1785,6 +1936,7 @@
             36.394523,
             140.170788
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -1797,6 +1949,7 @@
             36.394335,
             140.170859
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
@@ -1809,6 +1962,7 @@
             36.394057,
             140.170992
           ],
+          "outOfBounds": false,
           "visibility": "public",
           "status": "published",
           "routes": []
