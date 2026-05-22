@@ -24,7 +24,7 @@ B-Routes/
 ## 技術スタック
 
 - フロント: React 19 + Vite 6 + TypeScript（SPA）
-- 地図: Leaflet + react-leaflet（OpenStreetMap タイル）
+- 地図: Leaflet + react-leaflet（国土地理院 地理院タイル・標準地図）
 - 状態: React の標準フックを基本に、必要なら最小限のストア
 - バックエンド: Supabase（Postgres / Auth / Storage）。マジックリンク認証
 - PWA: `vite-plugin-pwa`（アプリ本体・直近エリアデータ・最近見た画像）

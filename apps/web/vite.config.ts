@@ -50,7 +50,7 @@ export default defineConfig({
           },
           {
             urlPattern: ({ url }) =>
-              url.hostname.endsWith('.tile.openstreetmap.org'),
+              url.hostname === 'maps.gsi.go.jp',
             handler: 'CacheFirst',
             options: {
               cacheName: 'b-routes-tiles',

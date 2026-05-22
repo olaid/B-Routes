@@ -1,8 +1,10 @@
 import { useMemo } from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom'
-import { MapContainer, Marker, Polygon, Popup, TileLayer } from 'react-leaflet'
+import { MapContainer, Marker, Polygon, Popup } from 'react-leaflet'
 import { BearingCard } from '../../components/BearingCard'
 import { FitBounds } from '../../components/map/FitBounds'
+import { GsiTileLayer } from '../../components/map/GsiTileLayer'
+import { GSI_STD_TILE_MAX_ZOOM } from '../../lib/gsiMapTiles'
 import { getAreaBySlug } from '../../data/areasRepository'
 import { formatDistance, haversineDistance, initialBearing, polygonCentroid } from '../../lib/geo'
 import { boundsFromPolygon, toLeafletLatLng } from '../../lib/mapHelpers'
@@ -79,12 +81,9 @@ export function AreaMapPage() {
           center={[center.lat, center.lng]}
           zoom={15}
           scrollWheelZoom
-          maxZoom={19}
+          maxZoom={GSI_STD_TILE_MAX_ZOOM}
         >
-          <TileLayer
-            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-          />
+          <GsiTileLayer />
           <FitBounds bounds={bounds} />
           <Polygon
             positions={area.polygon.map(([lat, lng]) => [lat, lng])}
