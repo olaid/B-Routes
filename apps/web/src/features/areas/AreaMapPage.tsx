@@ -7,6 +7,7 @@ import { GsiTileLayer } from '../../components/map/GsiTileLayer'
 import { GSI_STD_TILE_MAX_ZOOM } from '../../lib/gsiMapTiles'
 import { getAreaBySlug } from '../../data/areasRepository'
 import { formatDistance, haversineDistance, initialBearing, polygonCentroid } from '../../lib/geo'
+import { areaPolygonPathOptions } from '../../lib/areaMapColors'
 import { boundsFromPolygon, toLeafletLatLng } from '../../lib/mapHelpers'
 import { useAreasData } from '../../hooks/useAreasData'
 import { useGeolocationPosition } from '../../hooks/useGeolocationPosition'
@@ -64,6 +65,7 @@ export function AreaMapPage() {
 
   const center = bounds.getCenter()
   const unlocatedWalls = area.walls.filter((w) => w.outOfBounds)
+  const { areas: allAreas } = areasState.data
 
   return (
     <div className="map-page map-page--stack">
@@ -87,12 +89,7 @@ export function AreaMapPage() {
           <FitBounds bounds={bounds} />
           <Polygon
             positions={area.polygon.map(([lat, lng]) => [lat, lng])}
-            pathOptions={{
-              color: '#0f766e',
-              weight: 2,
-              fillColor: '#14b8a6',
-              fillOpacity: 0.12
-            }}
+            pathOptions={areaPolygonPathOptions(area.id, allAreas, { fillOpacity: 0.18 })}
           />
           {area.walls
             .filter((w) => !w.outOfBounds)

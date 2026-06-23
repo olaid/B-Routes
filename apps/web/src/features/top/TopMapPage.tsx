@@ -5,6 +5,7 @@ import { FitBounds } from '../../components/map/FitBounds'
 import { GsiTileLayer } from '../../components/map/GsiTileLayer'
 import { GSI_STD_TILE_MAX_ZOOM } from '../../lib/gsiMapTiles'
 import { useAreasData } from '../../hooks/useAreasData'
+import { areaPolygonPathOptions } from '../../lib/areaMapColors'
 import { boundsFromAreas } from '../../lib/mapHelpers'
 import '../../lib/leafletSetup'
 
@@ -60,12 +61,7 @@ export function TopMapPage() {
           <Polygon
             key={area.id}
             positions={area.polygon.map(([lat, lng]) => [lat, lng])}
-            pathOptions={{
-              color: '#0f766e',
-              weight: 2,
-              fillColor: '#14b8a6',
-              fillOpacity: 0.22
-            }}
+            pathOptions={areaPolygonPathOptions(area.id, areas)}
             eventHandlers={{
               click: () => {
                 navigate(`/areas/${area.slug}`)
